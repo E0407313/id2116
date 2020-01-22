@@ -1,16 +1,16 @@
 
     body {
-        background-color: red;
+        background-color: rgb(196, 30, 30);
       }
       
       h1 {
-        color: blue;
+        color: white;
         text-align: center;
         font-size: 200px;
       }
 
       h2 {
-        color: yellow;
+        color: white;
         text-align: center;
         font-size:100px;
       }
