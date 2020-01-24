@@ -51,16 +51,17 @@
         font-size:15px;
         background: #ffffff;
         opacity:0.4;
-
+        border: 1px solid #fff;
         color: #fff;
         
         border-radius: 2px;
         }
 
         input.MyButton:hover {
-        color: #ffff00;
+          background: #ffffff;
+          opacity:0.4;
         background: #000;
-        border: 1px solid #fff;
+        
         }
       
   
