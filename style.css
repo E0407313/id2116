@@ -53,8 +53,8 @@
         opacity:0.4;
 
         color: #fff;
-        border: 1px solid #3366cc;
-        border-radius: 10px;
+        
+        border-radius: 2px;
         }
 
         input.MyButton:hover {
