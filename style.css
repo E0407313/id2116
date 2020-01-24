@@ -50,12 +50,11 @@
         font-size: 150%;
         font-size:15px;
         border: 1px solid #fff;
-        color: #fff;
         border-radius: 3px;
         }
 
         input.MyButton:hover {
-          background: #ffffff;
+          background-color: #ffffff;
           opacity:0.4;
         
         }
