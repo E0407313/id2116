@@ -21,6 +21,7 @@
       #h2-container {
       width:700px;
         margin-left: 200px;
+        margin-top:200px;
       }
 
       h3 {
@@ -33,7 +34,7 @@
       #h3-container {
         width:700px;
         margin-left: 200px;
-        margin-top:300px;
+        margin-top:200px;
       }
       
       p {
