@@ -44,7 +44,7 @@
 
       input.MyButton {
         width: 150px;
-        padding: 20px;
+        padding: 15px;
         font-weight: none;
         font-size: 150%;
         font-size:15px;
@@ -55,8 +55,8 @@
         }
 
         input.MyButton:hover {
-          background-color: #ffffff;
-          opacity:0.4;
+          background-color: #ffffff 0.4;
+          
           color:#ffffff;
         
         }
