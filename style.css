@@ -43,6 +43,7 @@
       }
 
       input.MyButton {
+        margin-left:400px;
         width: 150px;
         padding: 15px;
         font-weight: none;
