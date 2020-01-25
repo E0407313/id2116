@@ -29,14 +29,14 @@
         font-weight:bold;
         font-family:'Open Sans', sans-serif;
         text-align: justify;
-        font-size:22px;
+        font-size:15px;
       }
 
       #error-text-body {
         width:700px;
         margin-left: 200px;
         margin-top:15px;
-        font-size:15px;
+       
       }
       
       p {
