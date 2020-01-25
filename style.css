@@ -18,7 +18,7 @@
         
       }
 
-      #h2-container {
+      #error-text-title {
       width:700px;
         margin-left: 200px;
         margin-top:230px;
@@ -31,10 +31,10 @@
         font-size:20px;
       }
 
-      #h3-container {
+      #error-text-body {
         width:700px;
         margin-left: 200px;
-        margin-top:20px;
+        margin-top:15px;
       }
       
       p {
