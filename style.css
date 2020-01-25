@@ -26,9 +26,10 @@
 
       h3 {
         color: white;
+        font-weight:bold;
         font-family:'Open Sans', sans-serif;
         text-align: justify;
-        font-size:20px;
+        font-size:22px;
       }
 
       #error-text-body {
