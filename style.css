@@ -43,13 +43,14 @@
       }
 
       input.MyButton {
-        width: 100px;
+        width: 150px;
         padding: 20px;
         font-weight: none;
         font-size: 150%;
         font-size:15px;
         background-color:#9e343e;
         border: 1px solid #fff;
+        color:#ffffff;
         border-radius: 3px;
         }
 
