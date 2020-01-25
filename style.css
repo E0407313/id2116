@@ -60,6 +60,10 @@
           background-color: #bd7479;
           border: 1px solid #bd7479;
           color:#ffffff;
+        }
+
+        input.checkbox{
+          margin-left:300px;
         
         
         }
