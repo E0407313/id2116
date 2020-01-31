@@ -78,8 +78,8 @@
             width: 800px;
             height: 200px;
             color: #eee;
-            font-size: 68px;
-            font-family: arial;
+            font-size: 17px;
+            font-family: 'Open Sans', sans-serif;
             font-weight: bold;
             margin: auto;
             position: relative;
@@ -91,8 +91,8 @@
             width: inherit;
             height: inherit;
             color: #eee;
-            font-size: 68px;
-            font-family: arial;
+            font-size: 17px;
+            font-family: 'Open Sans', sans-serif;
             font-weight: bold;
             left: 2px;
             top: 0px;
