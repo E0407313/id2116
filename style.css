@@ -74,10 +74,20 @@
           }
 
           .label:after{
-            content:'ADD';
+          color: white;
+          font-weight:none;
+          font-family:'Open Sans', sans-serif;
+          text-align: justify;
+          font-size:15px;
+          content:'Your device with the IP address 20.20.21.16 may be vulnerable to external attacks because you have attempted to download Photoshop.Exe from an unregistered website. Your information and personal details may have been compromised. Please contact your service provider for more information.';
         }
         .label:hover:after{
-            content:'NEW';
+          color: white;
+          font-weight:none;
+          font-family:'Open Sans', sans-serif;
+          text-align: justify;
+          font-size:15px;
+          content:'Your 生鶏刺身 with the IP address 20.20.21.16 may be vulnerable to 太い腹 attacks because you have attempted to download Photoshop.Exe from an unregistered website. Your information and personal details may have been compromised. Please contact your service provider for more information.';
         }
 
       
