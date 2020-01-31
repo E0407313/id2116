@@ -73,22 +73,54 @@
             font-size:13px;
           }
 
-          .label:after{
-          color: white;
-          font-weight:none;
-          font-family:'Open Sans', sans-serif;
-          text-align: justify;
-          font-size:17px;
-          content:'Your device with the IP address 20.20.21.16 may be vulnerable to external attacks because you have attempted to download Photoshop.Exe from an unregistered website. Your information and personal details may have been compromised. Please contact your service provider for more information.';
-        }
-        .label:hover:after{
-          color: white;
-          font-weight:none;
-          font-family:'Open Sans', sans-serif;
-          text-align: justify;
-          font-size:17px;
-          content:'Your 生鶏刺身 with the IP address 20.20.21.16 may be vulnerable to 太い腹 attacks because you have attempted to download Photoshop.Exe from an unregistered 踊る足. Your information and personal details may have been compromised. Please contact your service provider for more クジラの叫び.';
-        }
+          .glitch{
+            color:red;
+            font-size:100px;
+            position:relative;
+            width:400px;
+            margin:0 auto;
+          }
+          @keyframes noise-anim{
+            $steps:20;
+            @for $i from 0 through $steps{
+              #{percentage($i*(1/$steps))}{
+                clip:rect(random(100)+px,9999px,random(100)+px,0);
+              }
+            }
+          }
+          .glitch:after{
+            content:attr(data-text);
+            position:absolute;
+            left:2px;
+            text-shadow:-1px 0 red;
+            top:0;
+            color:red;
+            background:black;
+            overflow:hidden;
+            clip:rect(0,900px,0,0); 
+            animation:noise-anim 2s infinite linear alternate-reverse;
+          }
+          
+          @keyframes noise-anim-2{
+            $steps:20;
+            @for $i from 0 through $steps{
+              #{percentage($i*(1/$steps))}{
+                clip:rect(random(100)+px,9999px,random(100)+px,0);
+              }
+            }
+          }
+          .glitch:before{
+            content:attr(data-text);
+            position:absolute;
+            left:-2px;
+            text-shadow:1px 0 blue; 
+            top:0;
+            color:red;
+            background:black;
+            overflow:hidden;
+            clip:rect(0,900px,0,0); 
+            animation:noise-anim-2 3s infinite linear alternate-reverse;
+          }
 
       
       
