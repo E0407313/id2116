@@ -73,6 +73,21 @@
             font-size:13px;
           }
 
+          span {
+            font-size:15px;
+        }
+        a {
+            color:#ffffff;
+        }
+        a:hover span {
+            display:none;
+        }
+        a:hover:before {
+            color:#ffffff;
+            font-size:15px;
+            content:"afdafadf";
+        }
+
       
       
   
