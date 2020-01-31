@@ -73,22 +73,141 @@
             font-size:13px;
           }
 
-          .label:after{
-          color: white;
-          font-weight:none;
-          font-family:'Open Sans', sans-serif;
-          text-align: justify;
-          font-size:17px;
-          content:'Your device with the IP address 20.20.21.16 may be vulnerable to external attacks because you have attempted to download Photoshop.Exe from an unregistered website. Your information and personal details may have been compromised. Please contact your service provider for more information.';
-        }
-        .label:hover:after{
-          color: white;
-          font-weight:none;
-          font-family:'Open Sans', sans-serif;
-          text-align: justify;
-          font-size:17px;
-          content:'Your 生鶏刺身 with the IP address 20.20.21.16 may be vulnerable to 太い腹 attacks because you have attempted to download Photoshop.Exe from an unregistered 踊る足. Your information and personal details may have been compromised. Please contact your service provider for more クジラの叫び.';
-        }
+          .main {
+            display: block;
+            width: 800px;
+            height: 200px;
+            color: #eee;
+            font-size: 68px;
+            font-family: arial;
+            font-weight: bold;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .main .text {
+            display: block;
+            width: inherit;
+            height: inherit;
+            color: #eee;
+            font-size: 68px;
+            font-family: arial;
+            font-weight: bold;
+            left: 2px;
+            top: 0px;
+            position: absolute;
+            overflow: hidden;
+            animation-name: textBlink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+          }
+          
+          .shadow {
+            position: absolute;
+            width: inherit;
+            height: 40px;
+            overflow: hidden;
+            animation-name: shadowDown;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+          }
+          
+          .shadow .viewport {
+            position: relative;
+            width: inherit;
+            height: 200px;
+          }
+          
+          .shadow .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            animation-name: shadowTextUp;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+          }
+          
+          @keyframes textBlink {
+            0% {
+              opacity: 1;
+              left: 2px;
+            }
+            30% {
+              opacity: .7;
+            }
+            70% {
+              opacity: .8;
+              left: -2px;
+            }
+            71% {
+              opacity: .8;
+              left: 0px;
+            }
+            75% {
+              opacity: .8;
+              left: 1px;
+            }
+            100% {
+              opacity: 7;
+              left: 0px;
+            }
+          }
+          
+          @keyframes shadowDown {
+            0% {
+              top: 0px;
+            }
+            10% {
+              top: 20px;
+            }
+            20% {
+              top: 30px;
+            }
+            40% {
+              top: 35px;
+            }
+            60% {
+              top: 50px;
+            }
+            70% {
+              top: 20px;
+            }
+            100% {
+              top: 10px;
+            }
+          }
+          
+          @keyframes shadowTextUp {
+            0% {
+              top: 0px;
+            }
+            10% {
+              top: -20px;
+              opacity: .5;
+            }
+            20% {
+              top: -30px;
+              opacity: 1;
+            }
+            40% {
+              top: -35px;
+            }
+            60% {
+              top: -50px;
+              opacity: .5;
+            }
+            70% {
+              top: -20px;
+            }
+            100% {
+              top: -10px;
+              opacity: 1;
+            }
+          }
 
       
       
