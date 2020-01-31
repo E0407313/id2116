@@ -73,38 +73,11 @@
             font-size:13px;
           }
 
-          .item{
-            width: 30px;
+          .label:after{
+            content:'ADD';
         }
-        a{
-            text-decoration:none;
-        }
-        .label {
-            padding: 1px 3px 2px;
-            font-size: 9.75px;
-            font-weight: bold;
-            color: #ffffff;
-            text-transform: uppercase;
-            white-space: nowrap;
-            background-color: #bfbfbf;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-            text-decoration: none;
-        }
-        .label.success {
-            background-color: #46a546;
-        }
-        
-        .item a p.new-label span{
-          position: relative;
-          content: 'NEW'
-        }
-        .item:hover a p.new-label span{
-          display: none;
-        }
-        .item:hover a p.new-label:after{
-          content: 'ADD';
+        .label:hover:after{
+            content:'NEW';
         }
 
       
