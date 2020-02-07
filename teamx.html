@@ -4,69 +4,124 @@
  <head>
     <style>
         body {background-color: #9e343e;}
-        title {color: white;
-        font-family:helvetica  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: justify;
-        font-size: 30px;
-        font-weight:bold;}
-        h1   {color: white;
-        font-family:helvetica  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: justify;
-        font-size: 25px;
-        font-weight:bold;}
-        p    {color: white;
-        font-weight:none;
-        font-family:helvetica;
-        text-align: justify;
-        font-size:15px;
-    width:300px;}
-        h2    {color: white;
-        font-weight:none;
-        font-family:helvetica;
-        text-align: justify;
-        font-size:20px;}
-        li    {color: white;
-        font-weight:none;
-        font-family:helvetica;
-        text-align: justify;
-        font-size:15px;}
-        a {color: white;
-        font-weight:bold;
-        font-family:helvetica;
-        text-align: justify;
-        font-size:15px;}
+        body {
+  font-family: Arial, sans-serif;
+  background: url(http://ak.picdn.net/assets/cms/2d850dac5bcfcb86514922660d6e357aa44fd06e-crop-shutterstock_310408637.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
 
         </style>
    <meta charset="utf-8">
    <title>WEEKLY PROGRESS</title>
  </head>
  <body>
-    <p>Click on the sun or on one of the planets to watch it closer:</p>
-
-<img src="https://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
-
-<map name="planetmap">
-  <area shape="rect" coords="0,0,82,126" alt="Sun" href="" data-reveal-id="one">
-  <area shape="circle" coords="90,58,3" alt="Mercury" href="" data-reveal-id="two">
-  <area shape="circle" coords="124,58,8" alt="Venus" href="" data-reveal-id="three">
-</map>
-
-<div id="one" class="reveal-modal" data-reveal>
-    <img src="https://www.nasa.gov/sites/default/files/706436main_20121114-304-193blend_m6-orig_full.jpg"/>
-    <a class="close-reveal-modal">&#215;</a>
+    <h1>Popup/Modal Windows without JavaScript</h1>
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
 </div>
 
-<div id="two" class="reveal-modal" data-reveal>
-    <img src="https://news.bbcimg.co.uk/media/images/65904000/jpg/_65904720_mdis_global_enhancedcolor_caloris_orth_hd.jpg"/>
-    <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<div id="three" data-reveal class="reveal-modal">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Kepler10b_artist.jpg"/>
-    <a class="close-reveal-modal">&#215;</a>
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Thank to pop me out of that button, but now i'm done so you can close this window.Thank to pop me out of that button, but now i'm done so you can close this window.Thank to pop me out of that button, but now i'm done so you can close this window.Thank to pop me out of that button, but now i'm done so you can close this window.Thank to pop me out of that button, but now i'm done so you can close this window.Thank to pop me out of that button, but now i'm done so you can close this window.Thank to pop me out of that button, but now i'm done so you can close this window.Thank to pop me out of that button, but now i'm done so you can close this window.
+		</div>
+	</div>
 </div>
  </body>
  
  </html>
 
- <script>$(document).foundation();</script>
+ 
