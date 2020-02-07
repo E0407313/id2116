@@ -38,22 +38,35 @@
 
         </style>
    <meta charset="utf-8">
-   <title>ABOUT</title>
+   <title>WEEKLY PROGRESS</title>
  </head>
  <body>
-    <h1>Hello there! My name is Lester.</h1>
-    <p>I am a design student currently studying in NUS. As a designer, I love the relinquish in the challenges that present themselves in my projects and find ways to overcome them and improve my skills. Outside of design, my hobbies include folding origami, critiquing movies, gaming and gardening.</p>
- 
-    <h2>My strengths as a designer are...</h2>
-     <ul>
-       <li>Being competent in Rhino</li>
-       <li>Being able to empathize with my user</li>
-       <li>Being able to take criticism</li>
-       <li>Having an open mind for ideation</li>
-     </ul>
- 
-    <h2>My Teammate is</h2>
-    <p><a href="Guozi.html">Guozi rhight here</a></p> 
+    <p>Click on the sun or on one of the planets to watch it closer:</p>
+
+<img src="https://www.w3schools.com/tags/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="" data-reveal-id="one">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="" data-reveal-id="two">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="" data-reveal-id="three">
+</map>
+
+<div id="one" class="reveal-modal" data-reveal>
+    <img src="https://www.nasa.gov/sites/default/files/706436main_20121114-304-193blend_m6-orig_full.jpg"/>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="two" class="reveal-modal" data-reveal>
+    <img src="https://news.bbcimg.co.uk/media/images/65904000/jpg/_65904720_mdis_global_enhancedcolor_caloris_orth_hd.jpg"/>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="three" data-reveal class="reveal-modal">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Kepler10b_artist.jpg"/>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
  </body>
  
  </html>
+
+ <script>$(document).foundation();</script>
