@@ -82,10 +82,7 @@ height: 100%;
   height: 500px;
   position: relative;
   transition: all 5s ease-in-out;
-  /** scrollbar **/
-  overflow-y:scroll;
-  overflow-x:hidden;
-  text-align: justify;
+  
   
 }
 
@@ -108,9 +105,11 @@ height: 100%;
   color: #06D85F;
 }
 .popup .content {
-  max-height: 95%;
-  
-  
+  max-height: 80%;
+  /** scrollbar **/
+  overflow-y:scroll;
+  overflow-x:hidden;
+  text-align: justify;
 }
 
 @media screen and (max-width: 700px){
