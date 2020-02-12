@@ -170,6 +170,7 @@ section h1 {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index:999999999;
 }
 .overlay:target {
   visibility: visible;
@@ -183,6 +184,8 @@ section h1 {
   width: 30%;
   position: relative;
   transition: all 2s ease-in-out;
+  z-index:999999999;
+
 }
 .popup .close {
   position: absolute;
@@ -193,6 +196,7 @@ section h1 {
   font-weight: bold;
   text-decoration: none;
   color: #333;
+  z-index:999999999;
 }
 .popup .content {
   max-height: 30%;
@@ -302,11 +306,6 @@ section h1 {
       
 </body>
 
-<div id="box1" class="popup_block">
-
-  write here whatever you want ok bye
-  
-  </div></div></div></div></div></div></div></div></div></div></div>
 
 </html>
 
