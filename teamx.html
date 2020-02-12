@@ -10,294 +10,192 @@
   <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 
     <style>
-       body{
-			font-family: arial,helvetica;
-			color: #F2F2F2;
-		}
-		h1{
-			font-size: 6em;
-		}
-		p{
-			font-size: 2em;
-		}
-		.content{
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
-			text-align: center;
-		}
-		/* Section 1
-		 * --------------------------------------- */
-		#section0{
-			background-color: #BFDA00;
-		}
-		#section0 h1{
-			color: #444;
-		}
-		#section0 p{
-			color: #333;
-			opacity: 0.4;
-		}
-		/* Section 2
-		 * --------------------------------------- */
-		#section1{
-			background-color: #2EBE21;
-		}
-		#section1 h1{
-			color: #fff;
-		}
-		#section1 p{
-			opacity: 0.8;
-		}
-		/* Section 3
-		 * --------------------------------------- */
-		#section2{
-			background-color: #2C3E50;
-		}
-		#section2 h1{
-			color: #F2F2F2;
-		}
-		#section2 p{
-			opacity: 0.6;
-		}
+        body {background-color: #9e343e;}
+        body {
+  font-family: Arial, sans-serif;
+  background: url() no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 
-/**
- * fullPage Pure Javascript v.0.0.9 (Alpha) - Not support given until Beta version.
- * https://github.com/alvarotrigo/fullPage.js
- * MIT licensed
- *
- * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
- */
-html.fp-enabled,
-.fp-enabled body {
-    margin: 0;
-    padding: 0;
-    overflow:hidden;
+.teamx {
+  top:100px;
+  left:100px; 
+  font-family:Helvetica ;
+  font-size: 18px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
+}
 
-    /*Avoid flicker on slides transitions for mobile phones #336 */
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-#superContainer {
-    height: 100%;
-    position: relative;
 
-    /* Touch detection for Windows 8 */
-    -ms-touch-action: none;
+.credit {
+  bottom: 100px;
+  right: 100px;
+  font-family:'Fredoka One', cursive;
+  font-size: 12px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
+}
 
-    /* IE 11 on Windows Phone 8.1*/
-    touch-action: none;
+.menu {
+  top: 100px;
+  right: 100px;
+  font-family:'Fredoka One', cursive;
+  font-size: 12px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
 }
-.fp-section {
-    position: relative;
-    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
-    -moz-box-sizing: border-box; /* <=28 */
-    box-sizing: border-box;
-    height:100%;
-}
-.fp-slide {
-    float: left;
-}
-.fp-slide, .fp-slidesContainer {
-    height: 100%;
-    display: block;
-}
-.fp-slides {
-    z-index:1;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
-    transition: all 0.3s ease-out;
-}
-.fp-section.fp-table, .fp-slide.fp-table {
-    display: table;
-    table-layout:fixed;
-    width: 100%;
-    height:100%;
-}
-.fp-tableCell {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    height: 100%;
-}
-.fp-slidesContainer {
-    float: left;
-    position: relative;
-}
-.fp-controlArrow {
-    position: absolute;
-    z-index: 4;
-    top: 50%;
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    margin-top: -38px;
-}
-.fp-controlArrow.fp-prev {
-    left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
-}
-.fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
-}
-.fp-scrollable {
-    overflow: scroll;
 
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
 }
-.fp-notransition {
-    -webkit-transition: none !important;
-    transition: none !important;
+
+
+/** what i added **/
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-#fp-nav {
-    position: fixed;
-    z-index: 100;
-    margin-top: -32px;
-    top: 50%;
-    opacity: 1;
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
 }
-#fp-nav.right {
-    right: 17px;
+section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 64px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
 }
-#fp-nav.left {
-    left: 17px;
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
 }
-.fp-slidesNav{
-    position: absolute;
-    z-index: 4;
-    left: 50%;
-    opacity: 1;
+
+#section01 a {
+  padding-top: 60px;
 }
-.fp-slidesNav.bottom {
-    bottom: 17px;
+#section01 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
 }
-.fp-slidesNav.top {
-    top: 17px;
+
+
+
+#section02 a {
+  padding-top: 60px;
 }
-#fp-nav ul,
-.fp-slidesNav ul {
-  margin: 0;
-  padding: 0;
+#section02 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+  z-index:1;
 }
-#fp-nav ul li,
-.fp-slidesNav ul li {
-    display: block;
-    width: 14px;
-    height: 13px;
-    margin: 7px;
-    position:relative;
+#section02 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+  z-index:1;
 }
-.fp-slidesNav ul li {
-    display: inline-block;
-}
-#fp-nav ul li a,
-.fp-slidesNav ul li a {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;
-}
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span{
-    height: 12px;
-    width: 12px;
-    margin: -6px 0 0 -6px;
-    border-radius: 100%;
-}
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    height: 4px;
-    width: 4px;
-    border: 0;
-    background: #333;
-    left: 50%;
-    top: 50%;
-    margin: -2px 0 0 -2px;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
-#fp-nav ul li .fp-tooltip {
-    position: absolute;
-    top: -2px;
-    color: #fff;
-    font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
-    white-space: nowrap;
-    max-width: 220px;
-    overflow: hidden;
-    display: block;
-    opacity: 0;
-    width: 0;
-}
-#fp-nav ul li:hover .fp-tooltip,
-#fp-nav.fp-show-active a.active + .fp-tooltip{
-    -webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in;
-    width: auto;
-    opacity: 1;
-}
-#fp-nav ul li .fp-tooltip.right {
-    right: 20px;
-}
-#fp-nav ul li .fp-tooltip.left {
-    left: 20px;
-}
+
+#section01 { background: url(https://picsum.photos/1200/800?image=575) center center / cover no-repeat; z-index:1;}
+#section02 { background: url(https://picsum.photos/1200/800?image=1016) center center / cover no-repeat; z-index:1;}
 
 
         </style>
    <meta charset="utf-8">
-   <div id="fullpage">
-    <div class="section " id="section0">
-      <div class="content">
-        <h1>fullPage.js</h1>
-        <p>Javascript only version</p>
-      </div>
+   <title>WEEKLY PROGRESS</title>
+ </head>
+ <body>
+
+  <div class="teamx">
+    Team X  
     </div>
-    <div class="section" id="section1">
-      <div class="slide" id="slide1">
-        <div class="content">
-          <h1>No need for jQuery</h1>
-          <p>
-            5 Kb gzipped!!
-          </p>
-          <p>
-                Improve the loading time of your site!
-          </p>
-        </div>
+
+    <div class="credit">
+      credit
       </div>
-      <div class="slide" id="slide2">
-        <div class="content">
-          <h1>Slides too!</h1>
-        </div>
-      </div>
-      <div class="slide" id="slide2">
-        <div class="content">
-          <h1>More slides!</h1>
-        </div>
-      </div>
-    </div>
-    <div class="section" id="section2">
-      <div class="content">
-        <h1>Compatible</h1>
-        <p>IE 8+ support.</p>
-      </div>
-    </div>
-  </div>
+
+  <div class="menu">
+     credit
+    </div>    
+
+    <section id="section01" class="demo">
+      <h1>Scroll Down Button #1</h1>
+      <a href="#section02"><span></span>Scroll</a>
+    </section>
+
+    
+
+    <section id="section02" class="demo">
+      
+      
+        <h1>Our Weekly Progress</h1>
+
+        
+
+
+      <a href="#section03"><span></span>Scroll</a>
+    </section>
+    <section id="section03" class="demo">
+      <h1>Scroll Down Button #3</h1>
+      <a href="#section04"><span></span>Scroll</a>
+    </section>
 
 
     
@@ -307,13 +205,44 @@ html.fp-enabled,
 
 
 
-
-    <script>fullpage.initialize('#fullpage', {
-      anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-      menu: '#menu',
-      css3:true
+<script>
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+        && 
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
     });</script>
 
+      
 </body>
 </html>
 
