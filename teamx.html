@@ -156,97 +156,6 @@ section h1 {
 #section01 { background: url(https://picsum.photos/1200/800?image=575) center center / cover no-repeat; z-index:1;}
 #section02 { background: url(https://picsum.photos/1200/800?image=1016) center center / cover no-repeat; z-index:1;}
 
-/** a bit more **/
-
-.bg-overlay {
-	position: fixed;
-	z-index: 998;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0, 0, .7);
-	width: 100%;
-	height: 100%;
-	transition: opacity 500ms;
-	visibility: hidden;
-	opacity: 0;
-
-	&:target {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-.subscribe-optin {
-	position: relative;
-	z-index: 999;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	padding: 5rem;
-	width: 50%;
-	height: auto;
-	background: #fff;
-	border-radius: 5px;
-	text-transform: uppercase;
-	font-size: .8rem;
-
-	h2 {
-		padding: 1rem 0;
-	}
-
-	.optin-close {
-		position: absolute;
-		top: 1rem;
-		right: 1rem;
-		z-index: 999;
-		color: #000;
-		font-size: 1rem;
-		text-decoration: none;
-
-		&:hover {
-			color: $light;
-			transition: color 500ms ease;
-		}
-	}
-
-	form {
-		
-		label {
-			display: none;
-		}
-
-		input {
-			display: inline-block;
-			padding: .5rem 1rem;
-			outline: none;
-			border: 1px solid $dark;
-			text-transform: uppercase;
-		}
-
-		input[type=text],
-		input[type=email] {
-			padding: .5rem 1rem;
-			width: 40%;
-		}
-
-		input[type=submit] {
-			background: $dark;
-			color: $light;
-
-			&:hover {
-				background: $light;
-				color: $dark;
-				transition: all 500ms;
-			}
-
-			&:active {
-				box-shadow: inset 2px 2px 2px 0 $dark;
-			}
-		}
-	}
-}
 
         </style>
    <meta charset="utf-8">
@@ -278,21 +187,7 @@ section h1 {
       
         <h1>Our Weekly Progress</h1>
 
-        <h1>Click <a href="#popup-optin">here</a> to open the popup box</h1>
-
-        <div class="bg-overlay" id="popup-optin">
-          <div class="subscribe-optin">
-            <h2>Subscribe to our blog!</h2>
-            <form action="">
-              <label for="optin-name">Your Name</label>
-              <input type="text" id="optin-name" placeholder="Your Name">
-              <label for="optin-email">Your Email Address</label>
-              <input type="email" id="optin-email" placeholder="Your Email">
-              <input type="submit" value="Subscribe">
-            </form>
-            <a href="#" class="optin-close">&times;</a>
-          </div>
-        </div>
+        
 
 
       <a href="#section03"><span></span>Scroll</a>
