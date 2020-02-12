@@ -9,76 +9,76 @@
  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 
    <style>
-       body {background-color: #9e343e;}
-       body {
- font-family: Arial, sans-serif;
- background: url() no-repeat;
- background-size: cover;
- height: 100vh;
+        body {background-color: #9e343e;}
+        body {
+  font-family: Arial, sans-serif;
+  background: url() no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .teamx {
- top:100px;
- left:100px; 
- font-family:Helvetica ;
- font-size: 18px;
- text-transform: none;
- position: fixed;
- z-index:999;
+  top:100px;
+  left:100px; 
+  font-family:Helvetica ;
+  font-size: 18px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
 }
 
 
 .credit {
- bottom: 100px;
- right: 100px;
- font-family:'Fredoka One', cursive;
- font-size: 12px;
- text-transform: none;
- position: fixed;
- z-index:999;
+  bottom: 100px;
+  right: 100px;
+  font-family:'Fredoka One', cursive;
+  font-size: 12px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
 }
 
 .menu {
- top: 100px;
- right: 100px;
- font-family:'Fredoka One', cursive;
- font-size: 12px;
- text-transform: none;
- position: fixed;
- z-index:999;
+  top: 100px;
+  right: 100px;
+  font-family:'Fredoka One', cursive;
+  font-size: 12px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
 }
 
 #firstpage {
-   height: 100%;
-   width: 100%;
-   position: absolute;
-   background: url(https://the-oasis.org/wp-content/uploads/2015/09/Lovebirds-.jpg); 
-   background-position: center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   z-index:9;
-   /** scrollbar **/
- overflow-y:scroll;
- overflow-x:hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(https://the-oasis.org/wp-content/uploads/2015/09/Lovebirds-.jpg); 
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index:9;
+    /** scrollbar **/
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
 
 h1 {
- text-align: center;
- font-family: Tahoma, Arial, sans-serif;
- color: #06D85F;
- margin: 80px 0;
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
 }
 
 .box {
- /** i don't like using this **/
- width: 10%;
- background-clip: padding-box;
- padding:20px;
- text-align: center;
- display:inline-block;
- 
+  /** i don't like using this **/
+  width: 10%;
+  background-clip: padding-box;
+  padding:20px;
+  text-align: center;
+  display:inline-block;
+  
 }
 
 img{ 
@@ -87,213 +87,111 @@ height: 100%;
 }
 
 .button {
- font-size: 1em;
- padding: 10px;
- color: #fff;
- border: 2px solid #06D85F;
- border-radius: 20px/50px;
- text-decoration: none;
- cursor: pointer;
- transition: all 0.3s ease-out;
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 .button:hover {
- background: #06D85F;
+  background: #06D85F;
 }
 
 .overlay {
- position: fixed;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
- background: rgba(0, 0, 0, 0.7);
- transition: opacity 500ms;
- visibility: hidden;
- opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
 }
 .overlay:target {
- visibility: visible;
- opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .popup {
- margin: 70px auto;
- padding: 20px;
- background: #fff;
- border-radius: 5px;
- width: 30%;
- height: 500px;
- position: relative;
- transition: all 5s ease-in-out;
- 
- 
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  height: 500px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  
+  
 }
 
 .popup h2 {
- margin-top: 0;
- color: #333;
- font-family: Tahoma, Arial, sans-serif;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
- position: absolute;
- top: 20px;
- right: 30px;
- transition: all 200ms;
- font-size: 30px;
- font-weight: bold;
- text-decoration: none;
- color: #333;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
 }
 .popup .close:hover {
- color: #06D85F;
+  color: #06D85F;
 }
 .popup .content {
- max-height: 90%;
- /** scrollbar **/
- overflow-y:scroll;
- overflow-x:hidden;
- text-align: justify;
+  max-height: 90%;
+  /** scrollbar **/
+  overflow-y:scroll;
+  overflow-x:hidden;
+  text-align: justify;
 }
 
 @media screen and (max-width: 700px){
- .box{
-   width: 70%;
-   height:400px;
- }
- .popup{
-   width: 70%;
-   height:400px;
- }
+  .box{
+    width: 70%;
+    height:400px;
+  }
+  .popup{
+    width: 70%;
+    height:400px;
+  }
 }
 
-/** what i added **/
+        </style>
+   <meta charset="utf-8">
+   <title>WEEKLY PROGRESS</title>
+ </head>
+ <body>
 
-section {
- position: relative;
- width: 100%;
- height: 100%;
-}
-section::after {
- position: absolute;
- bottom: 0;
- left: 0;
- content: '';
- width: 100%;
- height: 80%;
- background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
- background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
-}
-section h1 {
- position: absolute;
- top: 50%;
- left: 50%;
- z-index: 2;
- -webkit-transform: translate(-50%, -50%);
- transform: translate(-50%, -50%);
- color: #fff;
- font : normal 300 64px/1 'Josefin Sans', sans-serif;
- text-align: center;
- white-space: nowrap;
-}
+  <div class="teamx">
+    Team X  
+    </div>
 
-.demo a {
- position: absolute;
- bottom: 20px;
- left: 50%;
- z-index: 2;
- display: inline-block;
- -webkit-transform: translate(0, -50%);
- transform: translate(0, -50%);
- color: #fff;
- font : normal 400 20px/1 'Josefin Sans', sans-serif;
- letter-spacing: .1em;
- text-decoration: none;
- transition: opacity .3s;
-}
+    <div class="credit">
+      credit
+      </div>
 
-#section01 a {
- padding-top: 60px;
-}
-#section01 a span {
- position: absolute;
- top: 0;
- left: 50%;
- width: 24px;
- height: 24px;
- margin-left: -12px;
- border-left: 1px solid #fff;
- border-bottom: 1px solid #fff;
- -webkit-transform: rotate(-45deg);
- transform: rotate(-45deg);
- box-sizing: border-box;
-}
-
-
-
-#section02 a {
- padding-top: 60px;
-}
-#section02 a span {
- position: absolute;
- top: 0;
- left: 50%;
- width: 46px;
- height: 46px;
- margin-left: -23px;
- border: 1px solid #fff;
- border-radius: 100%;
- box-sizing: border-box;
-}
-#section02 a span::after {
- position: absolute;
- top: 50%;
- left: 50%;
- content: '';
- width: 16px;
- height: 16px;
- margin: -12px 0 0 -8px;
- border-left: 1px solid #fff;
- border-bottom: 1px solid #fff;
- -webkit-transform: rotate(-45deg);
- transform: rotate(-45deg);
- box-sizing: border-box;
-}
-
-#section01 { background: url(https://picsum.photos/1200/800?image=575) center center / cover no-repeat;}
-#section02 { background: url(https://picsum.photos/1200/800?image=1016) center center / cover no-repeat;}
-
-       </style>
-  <meta charset="utf-8">
-  <title>WEEKLY PROGRESS</title>
-</head>
-<body>
-
- <div class="teamx">
-   Team X  
-   </div>
-
-   <div class="credit">
+  <div class="menu">
      credit
-     </div>
+    </div>    
 
- <div class="menu">
-    credit
-   </div>    
-
-   <section id="section01" class="demo">
-     <h1>Scroll Down Button #1</h1>
-     <a href="#section02"><span></span>Scroll</a>
-   </section>
-   <section id="section02" class="demo">
-     <h1>Scroll Down Button #2</h1>
-     <a href="#section03"><span></span>Scroll</a>
-   </section>
+<div class="firstpage">
+</div>
 
 
 
-   <h1>Our Weekly Progress</h1>
+    <h1>Our Weekly Progress</h1>
 <div class="box">
- <a href="#popup1"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:300px;"></a>
+	<a href="#popup1"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:300px;"></a>
 </div>
 
 <div class="box">
@@ -301,102 +199,55 @@ section h1 {
 </div>
 
 <div class="box">
- <a href="#popup3"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:300px;"></a>
+	<a href="#popup3"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:300px;"></a>
 </div>
 
 <div class="box" style="text-align:center;">
- <a href="#popup4"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:300px;"></a>
+	<a href="#popup4"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:300px;"></a>
 </div>
 
 
 <div id="popup1" class="overlay">
- <div class="popup">
-   <h2>Week 01</h2>
-   <a class="close" href="#">&times;</a>
-   <div class="content">
-     The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
-     <br>
-     <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
-   </div>
- </div>
+	<div class="popup">
+		<h2>Week 01</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+      The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
+      <br>
+      <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
+		</div>
+	</div>
 </div>
 
 <div id="popup2" class="overlay">
- <div class="popup">
-   <h2>Week 02</h2>
-   <a class="close" href="#">&times;</a>
-   <div class="content">
-     why me 
-   </div>
- </div>
+	<div class="popup">
+		<h2>Week 02</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			why me 
+		</div>
+	</div>
 </div>
 
 <div id="popup3" class="overlay">
- <div class="popup">
-   <h2>Week 03</h2>
-   <a class="close" href="#">&times;</a>
-   <div class="content">
-     why me 
-   </div>
- </div>
+	<div class="popup">
+		<h2>Week 03</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			why me 
+		</div>
+	</div>
 </div>
 
 <div id="popup4" class="overlay">
- <div class="popup">
-   <h2>Week 04</h2>
-   <a class="close" href="#">&times;</a>
-   <div class="content">
-     why me 
-   </div>
- </div>
+	<div class="popup">
+		<h2>Week 04</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			why me 
+		</div>
+	</div>
 </div>
 
-<script type="text/javascript">
-
-$(function() {
- $('a[href*=#]').on('click', function(e) {
-   e.preventDefault();
-   $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
- });
-});
-
-</script>
-
-<script>// Select all links with hashes
- $('a[href*="#"]')
-   // Remove links that don't actually link to anything
-   .not('[href="#"]')
-   .not('[href="#0"]')
-   .click(function(event) {
-     // On-page links
-     if (
-       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-       && 
-       location.hostname == this.hostname
-     ) {
-       // Figure out element to scroll to
-       var target = $(this.hash);
-       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-       // Does a scroll target exist?
-       if (target.length) {
-         // Only prevent default if animation is actually gonna happen
-         event.preventDefault();
-         $('html, body').animate({
-           scrollTop: target.offset().top
-         }, 1000, function() {
-           // Callback after animation
-           // Must change focus!
-           var $target = $(target);
-           $target.focus();
-           if ($target.is(":focus")) { // Checking if the target was focused
-             return false;
-           } else {
-             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-             $target.focus(); // Set focus again
-           };
-         });
-       }
-     }
-   });</script>
 </body>
 </html>
