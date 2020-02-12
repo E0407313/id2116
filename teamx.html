@@ -3,6 +3,37 @@
  <html lang="en">
  <head>
   
+  <script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -156,6 +187,35 @@ section h1 {
 #section01 { background: url(https://picsum.photos/1200/800?image=575) center center / cover no-repeat; z-index:1;}
 #section02 { background: url(https://picsum.photos/1200/800?image=1016) center center / cover no-repeat; z-index:1;}
 
+/*CODES BY PAINTHEMES.TUMBLR.COM*/
+.popup_block{
+display:none;
+background:#fff; /*change the color of your background*/
+padding:15px;
+border:1px solid #d6d6d6; /*change the color of your border*/
+float:left;
+position:fixed;
+top:50%;left:50%;
+z-index: 99999;
+box-shadow:rgba(0,0,0,.06) 7px 7px; /*delete if you don't want shadow below your box*/
+}
+ 
+#fade {
+display:none;
+position:fixed;
+left:0px;
+top:0px;
+width:100%;
+height:100%;
+z-index:9999;
+background:{color:background}; /* change the color of the background below the box */
+opacity:.7; /* change the opacity */
+}
+
+*html #fade {position: absolute;}
+*html .popup_block {position: absolute;}
+/*CODES BY PAINTHEMES.TUMBLR.COM*/
+
 
         </style>
    <meta charset="utf-8">
@@ -183,11 +243,13 @@ section h1 {
     
 
     <section id="section02" class="demo">
+
+      
       
       
         <h1>Our Weekly Progress</h1>
 
-        
+        <a href="#?w=auto" rel="box1" class="poplight">LINK TITLE</a>
 
 
       <a href="#section03"><span></span>Scroll</a>
@@ -244,6 +306,13 @@ section h1 {
 
       
 </body>
+
+<div id="box1" class="popup_block">
+
+  write here whatever you want ok bye
+  
+  </div></div></div></div></div></div></div></div></div></div></div>
+
 </html>
 
  
