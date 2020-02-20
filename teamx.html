@@ -12,20 +12,8 @@
  <script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
 <script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
 
-<script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
-<script src=“https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js”></script> 
-<script> 
-(function($){ 
-$(document).ready(function(){ 
-$(“[title],a[title],img[title]”).style_my_tooltips({ 
-tip_follows_cursor:true, 
-tip_delay_time:90, 
-tip_fade_speed:600, 
-attribute:“title” 
-}); 
-}); 
-})(jQuery); 
-</script> 
+
+
 
    <style>
         body {background-color: #9e343e;}
@@ -298,6 +286,36 @@ section {
         </style>
    <meta charset="utf-8">
    
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+<script src="https://static.tumblr.com/3yblkz0/Bu3nywvqg/shythemes_vr.js"></script>
+<script>
+$(document).ready(function(){
+$('.not').click(function(){
+    $(".notes").slideToggle("slow");
+    });
+$("[title],a[title],img[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:50,
+    tip_fade_speed:500,
+    attribute:"title"
+    });
+$('.photo-slideshow').pxuPhotoset({
+    lightbox: true,
+    rounded: false,
+    gutter: '5px',
+    borderRadius: '0px',
+    photoset: '.photo-slideshow',
+    photoWrap: '.photo-data',
+    photo: '.pxu-photo'
+    });
+});
+</script>
+
  </head>
  <body>
 
@@ -467,7 +485,18 @@ $(document).ready(function(){
 </script>
 
 
-
+<script> 
+  (function($){ 
+  $(document).ready(function(){ 
+  $(“[title],a[title],img[title]”).style_my_tooltips({ 
+  tip_follows_cursor:true, 
+  tip_delay_time:90, 
+  tip_fade_speed:600, 
+  attribute:“title” 
+  }); 
+  }); 
+  })(jQuery); 
+  </script> 
 
 </body>
 </html>
