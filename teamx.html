@@ -12,6 +12,20 @@
  <script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
 <script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
 
+<script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
+<script src=“https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js”></script> 
+<script> 
+(function($){ 
+$(document).ready(function(){ 
+$(“[title],a[title],img[title]”).style_my_tooltips({ 
+tip_follows_cursor:true, 
+tip_delay_time:90, 
+tip_fade_speed:600, 
+attribute:“title” 
+}); 
+}); 
+})(jQuery); 
+</script> 
 
    <style>
         body {background-color: #9e343e;}
@@ -452,13 +466,7 @@ $(document).ready(function(){
 });
 </script>
 
-<script>
-  (function($){
-      $(document).ready(function(){
-          $(“[title]”).style_my_tooltips();
-      });
-  })(jQuery);
-</script>
+
 
 
 </body>
