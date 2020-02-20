@@ -11,13 +11,7 @@
 
  <script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
 <script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
-<script>
-   (function($){
-       $(document).ready(function(){
-           $(“[title]”).style_my_tooltips();
-       });
-   })(jQuery);
-</script>
+
 
    <style>
         body {background-color: #9e343e;}
@@ -283,33 +277,7 @@ section {
 
         }
 
-        #s-m-t-tooltip {
-z-index: 9999;
-background: #fff;
-font-size: 12px;
-line-height: 13px;
-font-family:lucida console;
-letter-spacing: 1px;
-border:solid 1px;
-moz-border-radius-bottomright: 5px;
-border-bottom-right-radius: 5px;
--moz-border-radius-topleft: 5px;
-border-top-left-radius: 5px;
--moz-border-radius-bottomleft: 5px;
-border-bottom-left-radius: 5px;
--moz-border-radius-topright: 5px;
-border-top-right-radius: 5px;
--o-transition: all 0.3s ease-out;
--webkit-transition: all 0.3s ease-out;
--moz-transition: all 0.3s ease-out;
-text-transform: normal;
-color: {color:Link Title Text};
-max-width: 150px;
-word-wrap: break-word;
-padding: 2px 5px 2px 6px;
-display: block;
-margin: 24px 14px 7px 12px
-}
+        
 
         
 
@@ -484,6 +452,13 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+  (function($){
+      $(document).ready(function(){
+          $(“[title]”).style_my_tooltips();
+      });
+  })(jQuery);
+</script>
 
 
 </body>
