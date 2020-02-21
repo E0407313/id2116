@@ -1,24 +1,77 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-    <style>
-        body {background-color: #9e343e;}
-        body {
-  font-family: Arial, sans-serif;
-  background: url(http://ak.picdn.net/assets/cms/2d850dac5bcfcb86514922660d6e357aa44fd06e-crop-shutterstock_310408637.jpg) no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
+<html lang="en">
+<head>
+ 
 
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+
+ <script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
+<script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
+
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+
+
+   <style>
+        body {background-color: #9e343e;}
+        body { margin:0px;
+  font-family: Arial, sans-serif;
+  background: url() no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 
 .teamx {
-position:relative; 
-width:250px;
-bottom:0px;
-right:0px; 
+  top:100px;
+  left:100px; 
+  font-family:'Fredoka One', cursive;
+  font-size: 18px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
 }
+
+.platform {
+  bottom: 100px;
+  left: 100px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
+}
+
+
+.credit {
+  bottom: 100px;
+  right: 100px;
+  font-family:'Varela Round', sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
+}
+
+.menu {
+  top: 100px;
+  right: 100px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
+}
+
+ul#hlist li {
+	display: inline;
+  }
+
+.li { display: inline; }
 
 h1 {
   text-align: center;
@@ -27,165 +80,376 @@ h1 {
   margin: 80px 0;
 }
 
-.box {
-  width: 10%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 3px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: none;
-  
-}
 
 img{ 
 width: 100%; 
 height: 100%; 
 }
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
+/*CODES BY PAINTHEMES.TUMBLR.COM*/
+.popup_block{
+display:none;
+background:#fff; /*change the color of your background*/
+padding:15px;
+border:1px solid #d6d6d6; /*change the color of your border*/
+float:left;
+position:fixed;
+top:50%;left:50%;
+z-index: 99999;
+box-shadow:rgba(0,0,0,.06) 7px 7px; /*delete if you don't want shadow below your box*/
 }
-.button:hover {
-  background: #06D85F;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+ 
+#fade {
+display:none;
+position:fixed;
+left:0px;
+top:0px;
+width:100%;
+height:100%;
+z-index:9999;
+background:{color:background}; /* change the color of the background below the box */
+opacity:.7; /* change the opacity */
 }
 
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  height: 500px;
-  position: relative;
-  transition: all 5s ease-in-out;
-  display:inline;
-  
-  
-}
+*html #fade {position: absolute;}
+*html .popup_block {position: absolute;}
+/*CODES BY PAINTHEMES.TUMBLR.COM*/
 
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 90%;
-  overflow-y:scroll;
-  overflow-x:hidden;
-  text-align: justify;
-}
+section {
+            padding-top: 5%;
+            min-height: 100%;
+            font-weight: 300;
+            color: #2a3039;
+            z-index: 1;
+            position: relative;
+        }
+        section h1 {
+            font-size: 35px;
+        }
 
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-    height:400px;
-  }
-  .popup{
-    width: 70%;
-    height:400px;
-  }
-}
+        #home, #contact {
+            background: #343c47;
+            color: #ffffff;
+        }
+        #skills {
+            background: #f5f8fb;    
+        }
+
+        .dotnav-right {
+            right: 90px;
+            top: 50%;
+            margin-top: -50px;
+            height: 100px;
+            z-index: 999;
+            position: fixed;
+        }
+
+        .dotnav {
+            padding: 0;
+            list-style: none;
+            font-size: 0.001px;
+        }
+
+        .dotnav > li {
+            display: inline-block;
+            font-size: 1rem;
+            vertical-align: top;
+        }
+        .dotnav > li:nth-child(n+2) {
+            margin-left: 15px;
+        }
+
+        .dotnav > li > a {
+            display: inline-block;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #000000;
+            vertical-align: top;
+            overflow: hidden;
+            padding: 0;
+            text-indent: -999%;
+        }
+        .dotnav > li > a:hover,
+        .dotnav > li > a:focus {
+            background: #000000;
+            outline: none;
+        }
+        .dotnav > li > a:active {
+            background: #000000;
+        }
+        .dotnav > li.active > a {
+            background: #000000;
+        }
+        .dotnav-vertical > li {
+            display: block;
+            margin-right:10px;
+        }
+        .dotnav-vertical > li:nth-child(n+2) {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+        .awesome-tooltip + .tooltip > .tooltip-inner {
+            background-color: #000000; 
+            color: #fff; 
+            border: 1px solid #000000; 
+        }
+        .awesome-tooltip + .tooltip.left > .tooltip-arrow{
+            top:50%;
+            right:0;
+            margin-top:-5px;
+            border-top:5px solid transparent;
+            border-bottom:5px solid transparent;
+            border-left:5px solid #66ccff;
+        }
+
+        .container {
+          position: absolute;
+          margin: 0px auto;
+          top: 20%;
+          left: 60%;
+          margin-right: -40%;
+          transform: translate(-50%, -50%);
+
+        }
+
+        
+
+        
 
         </style>
    <meta charset="utf-8">
+   
 
-   <div class="teamx">
-    TEAM X  
-    </div>
 
-   <title>WEEKLY PROGRESS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+<script src="https://static.tumblr.com/3yblkz0/Bu3nywvqg/shythemes_vr.js"></script>
+
+<script>
+$(document).ready(function(){
+$('.not').click(function(){
+    $(".notes").slideToggle("slow");
+    });
+$("[title],a[title],img[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:50,
+    tip_fade_speed:500,
+    attribute:"title"
+    });
+$('.photo-slideshow').pxuPhotoset({
+    lightbox: true,
+    rounded: false,
+    gutter: '5px',
+    borderRadius: '0px',
+    photoset: '.photo-slideshow',
+    photoWrap: '.photo-data',
+    photo: '.pxu-photo'
+    });
+});
+</script>
+
+<script>
+  $(document).ready(function() {
+  //
+  $('a.poplight[href^=#]').click(function() {
+  var popID = $(this).attr('rel'); //Get Popup Name
+  var popURL = $(this).attr('href'); //Get Popup href to define size
+  var query= popURL.split('?');
+  var dim= query[1].split('&');
+  var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+  $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+  var popMargTop = ($('#' + popID).height() + 80) / 2;
+  var popMargLeft = ($('#' + popID).width() + 80) / 2;
+  //Apply Margin to Popup
+  $('#' + popID).css({
+  'margin-top' : -popMargTop,
+  'margin-left' : -popMargLeft
+  });
+  $('body').append('<div id="fade"></div>');
+  $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+  return false;
+  });
+  $('a.close, #fade').live('click', function() {
+  $('#fade , .popup_block').fadeOut(function() {
+  $('#fade, a.close').remove(); //fade them both out
+  });
+  return false;
+  });
+  });
+  </script>
+
+<script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+  
+      // Prevent default anchor click behavior
+      event.preventDefault();
+  
+      // Store hash
+      var hash = this.hash;
+  
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+     
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    });
+  });
+  </script>
+
+<script type="text/javascript">       
+  $('.awesome-tooltip').tooltip({
+    placement: 'left'
+  });  
+  $('body').scrollspy({ 
+    target: '#mainnav', 
+    offset: 000
+  }); </script>
+
+
+  
  </head>
  <body>
-    <h1>TEAM X</h1>
+
+  
+
+  <div class="teamx">
+    Team X  
+    </div>
+
+    <div class="credit">
+      credit
+      </div>
+
+  <div class="menu">
+    <ul id="hlist">
+     <li>Info</li> &nbsp&nbsp&nbsp&nbsp
+     <li>Inbox</li>
+    </ul>
+    </div> 
+    
+    <div class="platform">
+    ID2116
+    </div>
 
     
 
-    <div class="box">
-      <a href="#popup1"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width: 300px; display:inline;"></a>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Week 01</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
+          <br>
+          <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
+        </div>
+      </div>
     </div>
 
-<div class="box">
-	<a href="#popup2"><img src="https://i.ibb.co/SB6C4nW/15259702-1372268619458727-2740250031322797985-o.jpg" style="width: 300px; display:inline;"></a>
-</div>
+    <div id="box1" class="popup_block">
 
-<div class="box">
-	<a href="#popup3"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width: 300px; display:inline;"></a>
-</div>
+      write here whatever you want ok bye
+      
+      </div></div></div></div></div></div></div></div></div></div></div>
+    
+    <div id="popup2" class="overlay">
+      <div class="popup">
+        <h2>Week 02</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          We wanted to parse information (via Micro:Bit) from two gestures unique to the folding fan. These involve the 'spread opening' and 'fanning' of the folding fan. In order to do so, we have to attach the Micro:Bit to the leaves of the fan, which we accomplished by using the resistors like twine. 
+          <br>
+          <img src="https://s5.gifyu.com/images/ezgif-7-c86e63448cf4.gif">
+          <br>
+          We programmed a sad-face icon to denote the upwards tilt, a happy face icon for the downward tilt, and a confused face for shake. 
 
-<div id="popup1" class="overlay">
-	<div class="popup">
-		<h2>WEEK 01</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-      The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
-      <br>
-      <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
-      <p style="color:#FF0000";>Red paragraph text</p>
-		</div>
-	</div>
-</div>
+          <br>
+          We also used Micro:Bit's built-in accelerometer to capture the speed of opening the hand fan. 
+          One observation was that the 
 
-<div id="popup2" class="overlay">
-	<div class="popup">
-		<h2>WEEK 02</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-			why me 
-		</div>
-	</div>
-</div>
+          Observation : The Micro:Bit was unable to detect rapid and minute changes in light intensity, suggesting that the use of Micro:Bit’s built-in LEDs are unfeasible for this project. 
 
-<div id="popup3" class="overlay">
-	<div class="popup">
-		<h2>WEEK03</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-			We started off with collecting data via microbit from the fan. We did this by attaching the Micro:Bit to the ribs of the fan. 
-		</div>
-	</div>
-</div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="popup3" class="overlay">
+      <div class="popup">
+        <h2>Week 03</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          why me 
+        </div>
+      </div>
+    </div>
+    
+    <div id="popup4" class="overlay">
+      <div class="popup">
+        <h2>Week 04</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          why me 
+        </div>
+      </div>
+    </div>
+
+<nav id="mainnav" class="">
+  <ul class="dotnav dotnav-vertical dotnav-right nav">
+      <li class="awesome-tooltip" title="Home"><a href="#home"></a></li>
+      <li class="awesome-tooltip" title="About"><a href="#about"></a></li>
+      <li class="awesome-tooltip" title="Skills"><a href="#skills"></a></li>
+      <li class="awesome-tooltip" title="Projects"><a href="#projects"></a></li>
+      <li class="awesome-tooltip" title="Contact"><a href="#contact"></a></li>        
+  </ul>
+</nav>     
+<section id="home">             
+</section>
+<section id="about">  
+  
+  <div class="container">
+  <div class="box">
+    <a href="#?w=auto" rel="box1" class="poplight">LINK TITLE</a>
+
+    <a href="#popup1"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  </div>
+  
+  <div class="box">
+  <a href="#popup2"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  </div>
+  
+  <div class="box">
+    <a href="#popup3"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  </div>
+  
+  <div class="box" style="text-align:center;">
+    <a href="#popup4"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  </div>   
+</div>  
+    
+
+</section>
+<section id="skills">
+</section>
+<section id="projects">                
+</section>
+<section id="contact">    
+</section> 
 
 
- </body>
- 
- </html>
 
- 
+
+
+</body>
+
+
+</html>
