@@ -12,7 +12,37 @@
  <script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
 <script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
 
-
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
 
 
    <style>
@@ -379,37 +409,7 @@ $('.photo-slideshow').pxuPhotoset({
     offset: 000
   }); </script>
 
-<script type="text/javascript"
-src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-//
-$('a.poplight[href^=#]').click(function() {
-var popID = $(this).attr('rel'); //Get Popup Name
-var popURL = $(this).attr('href'); //Get Popup href to define size
-var query= popURL.split('?');
-var dim= query[1].split('&');
-var popWidth = dim[0].split('=')[1]; //Gets the first query string value
-$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
-var popMargTop = ($('#' + popID).height() + 80) / 2;
-var popMargLeft = ($('#' + popID).width() + 80) / 2;
-//Apply Margin to Popup
-$('#' + popID).css({
-'margin-top' : -popMargTop,
-'margin-left' : -popMargLeft
-});
-$('body').append('<div id="fade"></div>');
-$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
-return false;
-});
-$('a.close, #fade').live('click', function() {
-$('#fade , .popup_block').fadeOut(function() {
-$('#fade, a.close').remove(); //fade them both out
-});
-return false;
-});
-});
-</script>
+
   
  </head>
  <body>
@@ -506,7 +506,7 @@ return false;
   <div class="container">
   <div class="box">
     <a href="#?w=auto" rel="box1" class="poplight">LINK TITLE</a>
-    
+
     <a href="#popup1"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
   </div>
   
