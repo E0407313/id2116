@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  
-
+ 
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -26,6 +26,20 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
   background: url() no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+a {
+    color:{color:Links};
+    text-decoration: none;
+    cursor:help;
+    transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    -webkit-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
+    }
+    
+blockquote {
+border-left: 2px solid #ccc;    
 }
 
 .teamx {
@@ -100,6 +114,7 @@ opacity: .80;
 z-index: 9999;
 }
 .popup_block{
+    height:auto;
  display: none; 
  background: #fff;
  padding: 20px;
@@ -114,17 +129,27 @@ z-index: 9999;
  top: 50%; left: 50%;
  z-index: 99999; 
 }
+
+.popper {
+    height:500px;
+    padding:5px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+
+}
+
 img.btn_close {
  float: right;
  margin: -5px -5px 0 0;
 }
+
 /*--Making IE6 Understand Fixed Positioning--*/
 *html #fade {
  position: absolute;
 }
+
 *html .popup_block {
  position: absolute;
-
 }
 
 /*CODES BY PAINTHEMES.TUMBLR.COM*/
@@ -307,6 +332,7 @@ $('.photo-slideshow').pxuPhotoset({
 <script type="text/javascript"
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 <script>
+
 $(document).ready(function() {
 //
 $('a.poplight[href^=#]').click(function() {
@@ -322,6 +348,7 @@ var popMargLeft = ($('#' + popID).width() + 80) / 2;
 $('#' + popID).css({ 
 'margin-top' : -popMargTop, 
 'margin-left' : -popMargLeft 
+
 }); 
 $('body').append('<div id="fade"></div>'); 
 $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
@@ -382,7 +409,7 @@ return false;
     </div>
 
     <div class="credit">
-      credit
+      <a href="#?w=500" rel="01" class="poplight">credit</a>
       </div>
 
   <div class="menu">
@@ -439,22 +466,22 @@ return false;
 </section> 
 
 
-
+  
 
 
 </body>
 
 
-    <div id="02" class="popup_block" >
+    <div id="02" class="popup_block">
       
-
+<div class="popper">
       The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
           <br>
           <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
           <br>
           The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
       
-      </div></div></div></div></div></div></div></div></div></div></div>
+      </div></div>
     
       <div id="box2" class="popup_block">
 
@@ -473,6 +500,17 @@ return false;
             write here whatever you want ok bye
             
             </div></div></div></div></div></div></div></div></div></div></div>
+            
+           <div id="01" class="popup_block">
+
+            CREDIT PAGE
+            
+            Styled tooltips : https://aidensthemes.tumblr.com/post/125741775356/how-to-use-style-my-tooltips-on-your-themes-for
+            popup jquery code: https://htmlqueens.tumblr.com/post/67612263371/popup-tutorial-by-hannah
+            
+            </div></div></div></div></div></div></div></div></div></div></div> 
+            
+            
 
 
 </html>
