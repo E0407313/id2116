@@ -8,12 +8,14 @@
 
  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
 
  <script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
 <script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
 
 <script type="text/javascript"
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
 
 
 
@@ -86,41 +88,48 @@ width: 100%;
 height: 100%; 
 }
 
-/*CODES BY PAINTHEMES.TUMBLR.COM*/
+/*POPUP CODES*/
 
+#fade { /*--Transparent background layer--*/
+display: none; /*--hidden by default--*/
+background: #fff;
+background-image: url(''); /*if you want to add a background image to go behind your popup */
+position: fixed; left: 0; top: 0;
+width: 100%; height: 100%;
+opacity: .80;
+z-index: 9999;
+}
 .popup_block{
-  display:none;
-background:#fff; /*change the color of your background*/
-padding:15px;
-border:1px solid #d6d6d6; /*change the color of your border*/
-float:left;
-width:500px;
-height:500px;
-text-align: justify;
-position:fixed;
-top:50%;left:50%;
-z-index: 99999;
-box-shadow:rgba(0,0,0,.06) 7px 7px; /*delete if you don't want shadow below your box*/
-/*scrollbar*/
-max-height: 90%;
-overflow-y:scroll;
+ display: none; 
+ background: #fff;
+ padding: 20px;
+ border: 1px solid #ddd; 
+ float: left;
+  position: fixed;
+ /*text related*/
+ font-family: 'Nunito';
+ font-size: 15px; 
+ line-height: 1.5em;
+ text-align:justify;
+ top: 50%; left: 50%;
+ z-index: 99999; 
+}
+img.btn_close {
+ float: right;
+ margin: -5px -5px 0 0;
+}
+/*--Making IE6 Understand Fixed Positioning--*/
+*html #fade {
+ position: absolute;
+}
+*html .popup_block {
+ position: absolute;
+
 }
 
-#fade {
-display:none;
-position:fixed;
-left:0px;
-top:0px;
-width:100%;
-height:100%;
-z-index:9999;
-background:{color:background}; /* change the color of the background below the box */
-opacity:.7; /* change the opacity */
-}
-
-*html #fade {position: absolute;}
-*html .popup_block {position: absolute;}
 /*CODES BY PAINTHEMES.TUMBLR.COM*/
+
+
 
 section {
   padding-top: 5%;
@@ -227,6 +236,28 @@ section {
           margin-top:350px;
         }
 
+#s-m-t-tooltip {
+background: #fff;
+border-radius:2px;
+font-family: 'Nunito';
+font-size: 12px;
+line-height: 13px;
+letter-spacing: 1px;
+border:solid 1px;
+-o-transition: all 0.3s ease-out;
+-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+text-transform: lowercase;
+color: #1c1c1c;
+max-width: 150px;
+word-wrap: break-word;
+padding: 10px;
+display: block;
+margin-left:20px;
+margin-top:20px;
+z-index: 999999999999;
+}
+
 
         </style>
    <meta charset="utf-8">
@@ -262,36 +293,48 @@ $('.photo-slideshow').pxuPhotoset({
 });
 </script>
 
-<script>
-  $(document).ready(function() {
-  //
-  $('a.poplight[href^=#]').click(function() {
-  var popID = $(this).attr('rel'); //Get Popup Name
-  var popURL = $(this).attr('href'); //Get Popup href to define size
-  var query= popURL.split('?');
-  var dim= query[1].split('&');
-  var popWidth = dim[0].split('=')[1]; //Gets the first query string value
-  $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
-  var popMargTop = ($('#' + popID).height() + 80) / 2;
-  var popMargLeft = ($('#' + popID).width() + 80) / 2;
-  //Apply Margin to Popup
-  $('#' + popID).css({
-  'margin-top' : -popMargTop,
-  'margin-left' : -popMargLeft
-  });
-  $('body').append('<div id="fade"></div>');
-  $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
-  return false;
-  });
-  $('a.close, #fade').live('click', function() {
-  $('#fade , .popup_block').fadeOut(function() {
-  $('#fade, a.close').remove(); //fade them both out
-  });
-  return false;
-  });
-  });
-  </script>
 
+<script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
+<script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
+<script>
+   (function($){
+       $(document).ready(function(){
+           $(“[title]”).style_my_tooltips();
+       });
+   })(jQuery);
+</script>
+
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name 
+var popURL = $(this).attr('href'); //Get Popup href to define size 
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Chess_xxt45.svg/1024px-Chess_xxt45.svg.png" style="width:25px; margin-top:-50px; margin-left:-110px; margin-right:-50px;" class="btn_close" class="btn_close" title="escape" alt="escape" /></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2; 
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({ 
+'margin-top' : -popMargTop, 
+'margin-left' : -popMargLeft 
+}); 
+$('body').append('<div id="fade"></div>'); 
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false; 
+}); 
+$('a.close, #fade').live('click', function() { 
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+}); 
+return false; 
+});
+}); 
+</script>
 
 
 <script>
@@ -357,7 +400,52 @@ $('.photo-slideshow').pxuPhotoset({
 
     
 
-    <div id="box1" class="popup_block" >
+    
+
+<nav id="mainnav" class="">
+  <ul class="dotnav dotnav-vertical dotnav-right nav">
+      <li class="awesome-tooltip" title="Home"><a href="#home"></a></li>
+      <li class="awesome-tooltip" title="About"><a href="#about"></a></li>
+      <li class="awesome-tooltip" title="Skills"><a href="#skills"></a></li>
+      <li class="awesome-tooltip" title="Projects"><a href="#projects"></a></li>
+      <li class="awesome-tooltip" title="Contact"><a href="#contact"></a></li>        
+  </ul>
+</nav>     
+<section id="home">             
+</section>
+<section id="about">  
+  
+ 
+  <center>
+  <div class="purikura">
+  <a href="#?w=500" rel="02" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
+  <a href="#?w=auto" rel="box2" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  <a href="#?w=auto" rel="box3" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  <a href="#?w=auto" rel="box4" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  </div>
+  </center>
+
+
+   
+
+    
+
+</section>
+<section id="skills">
+</section>
+<section id="projects">                
+</section>
+<section id="contact">    
+</section> 
+
+
+
+
+
+</body>
+
+
+    <div id="02" class="popup_block" >
       
 
       The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
@@ -385,49 +473,6 @@ $('.photo-slideshow').pxuPhotoset({
             write here whatever you want ok bye
             
             </div></div></div></div></div></div></div></div></div></div></div>
-    
-
-<nav id="mainnav" class="">
-  <ul class="dotnav dotnav-vertical dotnav-right nav">
-      <li class="awesome-tooltip" title="Home"><a href="#home"></a></li>
-      <li class="awesome-tooltip" title="About"><a href="#about"></a></li>
-      <li class="awesome-tooltip" title="Skills"><a href="#skills"></a></li>
-      <li class="awesome-tooltip" title="Projects"><a href="#projects"></a></li>
-      <li class="awesome-tooltip" title="Contact"><a href="#contact"></a></li>        
-  </ul>
-</nav>     
-<section id="home">             
-</section>
-<section id="about">  
-  
- 
-  <center>
-  <div class="purikura">
-  <a href="#?w=auto" rel="box1" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
-  <a href="#?w=auto" rel="box2" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
-  <a href="#?w=auto" rel="box3" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
-  <a href="#?w=auto" rel="box4" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
-  </div>
-  </center>
-
-
-   
-
-    
-
-</section>
-<section id="skills">
-</section>
-<section id="projects">                
-</section>
-<section id="contact">    
-</section> 
-
-
-
-
-
-</body>
 
 
 </html>
