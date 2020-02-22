@@ -80,52 +80,14 @@ h1 {
   margin: 80px 0;
 }
 
-.box {
-  /** i don't like using this **/
-  width: 10%;
-  background-clip: padding-box;
-  display:inline-block;
-  position:relative;
-  padding:60px;
-}
 
 img{ 
 width: 100%; 
 height: 100%; 
 }
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: #06D85F;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index:999999;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
+/*CODES BY PAINTHEMES.TUMBLR.COM*/
+.popup_block{
   margin: 70px auto;
   padding: 20px;
   background: #fff;
@@ -135,30 +97,8 @@ height: 100%;
   position: relative;
   transition: all 5s ease-in-out;
   z-index:9999;
-  
-  
 }
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-  z-index:9999999999999999;
-}
-.popup .close:hover {
-  color: #06D85F;
-  
-}
+ 
 .popup .content {
   max-height: 90%;
   /** scrollbar **/
@@ -168,32 +108,6 @@ height: 100%;
   z-index:9999999999;
 }
 
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-    height:400px;
-    
-  }
-  .popup{
-    width: 70%;
-    height:400px;
-   
-  }
-}
-
-/*CODES BY PAINTHEMES.TUMBLR.COM*/
-.popup_block{
-display:none;
-background:#fff; /*change the color of your background*/
-padding:15px;
-border:1px solid #d6d6d6; /*change the color of your border*/
-float:left;
-position:fixed;
-top:50%;left:50%;
-z-index: 99999;
-box-shadow:rgba(0,0,0,.06) 7px 7px; /*delete if you don't want shadow below your box*/
-}
- 
 #fade {
 display:none;
 position:fixed;
@@ -439,64 +353,34 @@ $('.photo-slideshow').pxuPhotoset({
 
     
 
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <h2>Week 01</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
-          <br>
-          <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
-        </div>
-      </div>
-    </div>
+    
 
     <div id="box1" class="popup_block">
 
-      write here whatever you want ok bye
+      The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
+          <br>
+          <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
       
       </div></div></div></div></div></div></div></div></div></div></div>
     
-    <div id="popup2" class="overlay">
-      <div class="popup">
-        <h2>Week 02</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          We wanted to parse information (via Micro:Bit) from two gestures unique to the folding fan. These involve the 'spread opening' and 'fanning' of the folding fan. In order to do so, we have to attach the Micro:Bit to the leaves of the fan, which we accomplished by using the resistors like twine. 
-          <br>
-          <img src="https://s5.gifyu.com/images/ezgif-7-c86e63448cf4.gif">
-          <br>
-          We programmed a sad-face icon to denote the upwards tilt, a happy face icon for the downward tilt, and a confused face for shake. 
+      <div id="box2" class="popup_block">
 
-          <br>
-          We also used Micro:Bit's built-in accelerometer to capture the speed of opening the hand fan. 
-          One observation was that the 
+        write here whatever you want ok bye
+        
+        </div></div></div></div></div></div></div></div></div></div></div>
 
-          Observation : The Micro:Bit was unable to detect rapid and minute changes in light intensity, suggesting that the use of Micro:Bit’s built-in LEDs are unfeasible for this project. 
+        <div id="box3" class="popup_block">
 
-        </div>
-      </div>
-    </div>
+          write here whatever you want ok bye
+          
+          </div></div></div></div></div></div></div></div></div></div></div>
+
+          <div id="box4" class="popup_block">
+
+            write here whatever you want ok bye
+            
+            </div></div></div></div></div></div></div></div></div></div></div>
     
-    <div id="popup3" class="overlay">
-      <div class="popup">
-        <h2>Week 03</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          why me 
-        </div>
-      </div>
-    </div>
-    
-    <div id="popup4" class="overlay">
-      <div class="popup">
-        <h2>Week 04</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          why me 
-        </div>
-      </div>
-    </div>
 
 <nav id="mainnav" class="">
   <ul class="dotnav dotnav-vertical dotnav-right nav">
@@ -511,25 +395,17 @@ $('.photo-slideshow').pxuPhotoset({
 </section>
 <section id="about">  
   
-  <div class="container">
-  <div class="box">
-    
+  <br><br>
+  <center>
+  <a href="#?w=auto" rel="box1" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
+  <a href="#?w=auto" rel="box2" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  <a href="#?w=auto" rel="box3" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  <a href="#?w=auto" rel="box4" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  </center>
 
-    <a href="#popup1"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
-  </div>
-  
-  
-  <a href="#popup2"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
-  </div>
-  
-  <div class="box">
-    <a href="#popup3"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
-  </div>
-  
-  <div class="box" style="text-align:center;">
-    <a href="#popup4"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
-  </div>   
-</div>  
+
+   
+
     
 
 </section>
