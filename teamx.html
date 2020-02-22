@@ -94,92 +94,6 @@ width: 100%;
 height: 100%; 
 }
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: #06D85F;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index:999999;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  height: 500px;
-  position: relative;
-  transition: all 5s ease-in-out;
-  z-index:9999;
-  
-  
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-  z-index:9999999999999999;
-}
-.popup .close:hover {
-  color: #06D85F;
-  
-}
-.popup .content {
-  max-height: 90%;
-  /** scrollbar **/
-  overflow-y:scroll;
-  overflow-x:hidden;
-  text-align: justify;
-  z-index:9999999999;
-}
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-    height:400px;
-    
-  }
-  .popup{
-    width: 70%;
-    height:400px;
-   
-  }
-}
 
 /*CODES BY PAINTHEMES.TUMBLR.COM*/
 .popup_block{
@@ -378,6 +292,36 @@ $('.photo-slideshow').pxuPhotoset({
   });
   </script>
 
+  <script>
+  $(document).ready(function() {
+  //
+  $('a.poplight[href^=#]').click(function() {
+  var popID = $(this).attr('rel'); //Get Popup Name
+  var popURL = $(this).attr('href'); //Get Popup href to define size
+  var query= popURL.split('?');
+  var dim= query[1].split('&');
+  var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+  $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+  var popMargTop = ($('#' + popID).height() + 80) / 2;
+  var popMargLeft = ($('#' + popID).width() + 80) / 2;
+  //Apply Margin to Popup
+  $('#' + popID).css({
+  'margin-top' : -popMargTop,
+  'margin-left' : -popMargLeft
+  });
+  $('body').append('<div id="fade"></div>');
+  $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+  return false;
+  });
+  $('a.close, #fade').live('click', function() {
+  $('#fade , .popup_block').fadeOut(function() {
+  $('#fade, a.close').remove(); //fade them both out
+  });
+  return false;
+  });
+  });
+  </script>
+
 <script>
   $(document).ready(function(){
     // Add smooth scrolling to all links
@@ -438,65 +382,6 @@ $('.photo-slideshow').pxuPhotoset({
     </div>
 
     
-
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <h2>Week 01</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
-          <br>
-          <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
-        </div>
-      </div>
-    </div>
-
-    <div id="box1" class="popup_block">
-
-      write here whatever you want ok bye
-      
-      </div></div></div></div></div></div></div></div></div></div></div>
-    
-    <div id="popup2" class="overlay">
-      <div class="popup">
-        <h2>Week 02</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          We wanted to parse information (via Micro:Bit) from two gestures unique to the folding fan. These involve the 'spread opening' and 'fanning' of the folding fan. In order to do so, we have to attach the Micro:Bit to the leaves of the fan, which we accomplished by using the resistors like twine. 
-          <br>
-          <img src="https://s5.gifyu.com/images/ezgif-7-c86e63448cf4.gif">
-          <br>
-          We programmed a sad-face icon to denote the upwards tilt, a happy face icon for the downward tilt, and a confused face for shake. 
-
-          <br>
-          We also used Micro:Bit's built-in accelerometer to capture the speed of opening the hand fan. 
-          One observation was that the 
-
-          Observation : The Micro:Bit was unable to detect rapid and minute changes in light intensity, suggesting that the use of Micro:Bit’s built-in LEDs are unfeasible for this project. 
-
-        </div>
-      </div>
-    </div>
-    
-    <div id="popup3" class="overlay">
-      <div class="popup">
-        <h2>Week 03</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          why me 
-        </div>
-      </div>
-    </div>
-    
-    <div id="popup4" class="overlay">
-      <div class="popup">
-        <h2>Week 04</h2>
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          why me 
-        </div>
-      </div>
-    </div>
 
 <nav id="mainnav" class="">
   <ul class="dotnav dotnav-vertical dotnav-right nav">
