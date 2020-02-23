@@ -7,8 +7,9 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Nunito|Poppins|Ubuntu&display=swap" rel="stylesheet">
+
 
  <script src=“http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js”></script>
 <script type=“text/javascript” src=“https://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js”></script>
@@ -28,8 +29,8 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
   height: 100vh;
 }
 
-a {
-    color:{color:Links};
+a { 
+    color:#000000;
     text-decoration: none;
     cursor:help;
     transition-duration: 0.6s;
@@ -40,13 +41,56 @@ a {
     
 blockquote {
 border-left: 2px solid #ccc;    
+padding:2px 5px 2px 20px;
 }
+
+/*title*/
+
+h1 {
+    text-align:center;
+    font-family: 'Fredoka One';
+    font-size:15px;
+    color:#000000;
+}
+ 
+/*underline 下線*/
+
+a.kasen {
+  color:#ebc72a;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s;
+  padding-bottom: 0px;
+  z-index: 999;
+  
+}
+a.kasen:before {
+  content: " ";
+  position: absolute;
+  border-bottom: solid 1px blue;
+  bottom: 0px;
+  width: 0%;
+  left: 0%;
+  margin: 0 auto;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+a.kasen:hover::before {
+  border-bottom: solid 1px #ebc72a;
+  width: 100%;
+  left: 0%;
+}
+
+/*end of underline*/
+
+
 
 .teamx {
   top:100px;
   left:100px; 
-  font-family:'Fredoka One', cursive;
-  font-size: 18px;
+  font-family:'Fredoka One';
+  font-size: 28px;
   text-transform: none;
   position: fixed;
   z-index:999;
@@ -54,8 +98,9 @@ border-left: 2px solid #ccc;
 
 .platform {
   bottom: 100px;
+  color:#000000;
   left: 100px;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
   text-transform: none;
   position: fixed;
@@ -64,9 +109,10 @@ border-left: 2px solid #ccc;
 
 
 .credit {
+color:#000000;
   bottom: 100px;
   right: 100px;
-  font-family:'Varela Round', sans-serif;
+  font-family:'Nunito', sans-serif;
   font-size: 18px;
   text-transform: none;
   position: fixed;
@@ -88,13 +134,6 @@ ul#hlist li {
   }
 
 .li { display: inline; }
-
-h1 {
-  text-align: center;
-  font-family: Tahoma, Arial, sans-serif;
-  color: #06D85F;
-  margin: 80px 0;
-}
 
 
 img{ 
@@ -170,7 +209,7 @@ section {
         }
 
         #home, #contact {
-            background: #343c47;
+            background: #e3e3e3;
             color: #ffffff;
         }
         #skills {
@@ -258,7 +297,7 @@ section {
         }
 
           .purikura {
-          margin-top:350px;
+          margin-top:10px;
         }
 
 #s-m-t-tooltip {
@@ -281,6 +320,40 @@ display: block;
 margin-left:20px;
 margin-top:20px;
 z-index: 999999999999;
+}
+
+/*the page ページ section*/
+
+.hide {
+	  display: none;
+}
+
+#pageflip {
+	  right: 0; 
+  top: 0;
+}
+#pageflip img {
+	  width: 20px; 
+  height: 20px;
+	  z-index: 99;
+	  position: absolute;
+	  right: 0; 
+  top: 0;
+	  -ms-interpolation-mode: bicubic;
+}
+#pageflip .msg_block {
+	  width: 50px; 
+  height: 50px;
+	  overflow: hidden;
+  	position: absolute;
+  	right: 0; 
+  top: 0;
+	  background: #e4e4e4;
+}
+#pageflip .msg_block .inner-message {
+  position:absolute;
+  top:20px;
+  right:20px;
 }
 
 
@@ -398,7 +471,29 @@ return false;
   }); </script>
 
 
-  
+ <script>
+     $(document).ready(function(){
+$("#pageflip").hover(function() {
+		$("#pageflip img, .msg_block").stop()
+			.animate({
+				width: '100px', 
+				height: '100px'
+			}, 500); 
+		} , function() {
+		$("#pageflip img").stop() 
+			.animate({
+				width: '50px', 
+				height: '52px'
+			}, 220);
+		$(".msg_block").stop() 
+			.animate({
+				width: '50px', 
+				height: '50px'
+			}, 200);
+	});
+});
+ </script> 
+ 
  </head>
  <body>
 
@@ -409,7 +504,7 @@ return false;
     </div>
 
     <div class="credit">
-      <a href="#?w=500" rel="01" class="poplight">credit</a>
+      <a href="#?w=500" rel="credit" class="poplight">credit</a>
       </div>
 
   <div class="menu">
@@ -442,14 +537,50 @@ return false;
 </section>
 <section id="about">  
   
+    <div id="pageflip">
+		<a href=""><img src="http://www.ravelrumba.com/code/demos/jquery-peelback/assets/peel-image.png" alt="" border="0" /></a>
+	  <div class="msg_block">
+      <div class="inner-message">hi minh <3</div>
+	  </div>
+	</div>
  
   <center>
+ <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>  
+ 
+
+	
   <div class="purikura">
-  <a href="#?w=500" rel="02" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
-  <a href="#?w=auto" rel="box2" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
-  <a href="#?w=auto" rel="box3" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
-  <a href="#?w=auto" rel="box4" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  
+  <a href="#?w=500" rel="01" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
+  
+  <a href="#?w=auto" rel="02" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  
+  <a href="#?w=auto" rel="03" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  
+  <a href="#?w=auto" rel="04" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a
   </div>
+
+    <div class="purikura">
+    <a href="#?w=500" rel="05" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
+  
+  <a href="#?w=auto" rel="06" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  
+  <a href="#?w=auto" rel="07" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+ 
+ 
+    
+ 
+
+	
+  <a href="#?w=auto" rel="08" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  
+    </div>
+  
+
+
+  
+
+  
   </center>
 
 
@@ -467,46 +598,73 @@ return false;
 
 
   
-
+ 
 
 </body>
 
 
-    <div id="02" class="popup_block">
+    <div id="01" class="popup_block">
       
 <div class="popper">
-      The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
+      The object that we have chosen for our project is a <a href="#" class="kasen">traditional fan</a>. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
           <br>
           <img src="https://i.ibb.co/h90qrhG/IMG-5619.jpg">
           <br>
           The object that we have chosen for our project is a traditional fan. We chose a fan due to four main reasons. Firstly, its ability to expand and contract in size with a simple flicking motion using one's hand. Every person has their own unique way of opening a fan. Some open it slowly, others fast, and maybe a small majority opening it with two hands. Secondly, the movement that we make when utilizing the fan to cool ourselves also allows the fan to generate wind. The act of fanning can also be used to divert wind currents. Thirdly, due to the fan being made of thin wood, we can conduct stress tests to determine its flexibility. And lastly, light that passes through a fan varies depending on how many leaves and ribs overlap. 
-      
+      <blockquote>lmao</blockquote>
       </div></div>
     
-      <div id="box2" class="popup_block">
+<div id="02" class="popup_block">
 
-        write here whatever you want ok bye
+write here whatever you want ok bye
         
-        </div></div></div></div></div></div></div></div></div></div></div>
+</div>
 
-        <div id="box3" class="popup_block">
+<div id="03" class="popup_block">
 
-          write here whatever you want ok bye
+write here whatever you want ok bye
           
-          </div></div></div></div></div></div></div></div></div></div></div>
+</div>
 
-          <div id="box4" class="popup_block">
+<div id="04" class="popup_block">
+
+write here whatever you want ok bye
+            
+</div>
+            
+<div id="05" class="popup_block">
+
+write here whatever you want ok bye
+            
+</div>
+            
+<div id="06" class="popup_block">
+
+write here whatever you want ok bye
+            
+</div>
+            
+             <div id="07" class="popup_block">
 
             write here whatever you want ok bye
             
             </div></div></div></div></div></div></div></div></div></div></div>
             
-           <div id="01" class="popup_block">
+             <div id="08" class="popup_block">
 
-            CREDIT PAGE
+            write here whatever you want ok bye
             
+            </div></div></div></div></div></div></div></div></div></div></div>
+            
+           <div id="credit" class="popup_block">
+
+           <h1> CREDIT PAGE </h1>
+            <br>
             Styled tooltips : https://aidensthemes.tumblr.com/post/125741775356/how-to-use-style-my-tooltips-on-your-themes-for
             popup jquery code: https://htmlqueens.tumblr.com/post/67612263371/popup-tutorial-by-hannah
+            underline code from https://codepen.io/sandrasvensson/pen/GgvWBd
+            
+            page thing by https://codepen.io/massiebn/pen/dhLCI
             
             </div></div></div></div></div></div></div></div></div></div></div> 
             
