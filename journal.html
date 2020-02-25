@@ -405,7 +405,7 @@ h5 {
   
    margin: 100px;
   transition:0.5s ease-out;
-  z-index:999;
+  z-index:999999;
 }
 
 .nanbaringu:hover {
@@ -425,16 +425,29 @@ h5 {
 
 /*fan ファン*/
 
+.numbo {
+    position:absolute;
+  background-repeat:no-repeat;
+  margin-left:50%;
+  margin-right:-50%;
+  z-index:9999;
+    height:auto;
+    width:1000px;  
+}
+
 
 #fan {
+    position:absolute;
   background-repeat:no-repeat;
-  margin-left:30%;
-  margin-right:-70%;
-  margin-top:15%;
+  margin-left:50%;
+  margin-right:-50%;
+  margin-top:400px;
   z-index:9;
     height:auto;
     width:1000px;  
 }
+
+
 
         </style>
    <meta charset="utf-8">
@@ -627,17 +640,12 @@ $("#pageflip").hover(function() {
 
 <section id="home">
 
+
 <!-- fan --> 
-
-<div id="fan">
-
-<a><img src="https://i.ibb.co/K0gXkZx/bluefan.png" style="width:700px"></a>
-  
-
-
 <!-- ① --> 
 
-<button type="button" class="nanbaringu" style="margin-left:300px; top:-10px;">1</button>
+<div class="numbo">
+<button type="button" class="nanbaringu" style="margin-left:300px; margin-top:400px;">1</button>
 
 <form id="form1" style="margin-left:200px;">
 <b>DETAILS</b>
@@ -646,6 +654,18 @@ $("#pageflip").hover(function() {
 <br> so intricate even its rivet is styled</h5>
 </div>
 </form>
+</div>
+<!-- ① --> 
+
+<div id="fan">
+
+
+
+<a><img src="https://i.ibb.co/K0gXkZx/bluefan.png" style="width:700px; margin-left:-200px;"></a>
+
+</div>
+
+
 
 </section>
 
