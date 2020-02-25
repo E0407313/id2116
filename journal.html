@@ -88,6 +88,7 @@ a.kasen:hover::before {
 
 
 .teamx {
+    color:#31404b;
   top:100px;
   left:100px; 
   font-family:'Fredoka One';
@@ -380,6 +381,7 @@ form {
   color:#ffffff;
   font-family: 'Nunito';
   transition: 1s ease-out;
+  display:inline-block;
   
 }
 
@@ -390,6 +392,7 @@ h5 {
   font-size:15px;
   font-style:none;
   font-family:'Nunito';
+  display:inline-block;
   
 }
 
@@ -397,7 +400,7 @@ h5 {
 
 /*numbering ナンバリング*/
 
-.nanbaringu {
+ #nanbaringu1 {
   border: 2px solid #ffffff;
   border-radius: 50%;
   background: none;
@@ -415,7 +418,7 @@ h5 {
   z-index:999999;
 }
 
-.nanbaringu:hover {
+ #nanbaringu1:hover {
   border-radius: 50%;
   background-color:#ffffff;
   cursor:help;
@@ -432,6 +435,84 @@ h5 {
 
 }
 
+#nanbaringu2 {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: none;
+  color: #ffffff;
+  cursor: help;
+  font-size: 16px;
+  font-family:'Nunito';
+    width:35px;
+    height:35px;
+  text-decoration: none;
+  display: inline-block;
+   text-align:center;
+
+  transition:0.5s ease-out;
+  z-index:999999;
+}
+
+ #nanbaringu2:hover {
+  border-radius: 50%;
+  background-color:#ffffff;
+  cursor:help;
+  width:40px;
+  height:40px;
+  color: #61717c;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  text-align:center;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+
+}
+
+
+
+
+
+
+
+ #nanbaringu3 {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: none;
+  color: #ffffff;
+  cursor: help;
+  font-size: 16px;
+  font-family:'Nunito';
+    width:35px;
+    height:35px;
+  text-decoration: none;
+  display: inline-block;
+   text-align:center;
+
+  transition:0.5s ease-out;
+  z-index:999999;
+}
+
+ #nanbaringu3:hover {
+  border-radius: 50%;
+  background-color:#ffffff;
+  cursor:help;
+  width:40px;
+  height:40px;
+  color: #61717c;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  text-align:center;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+
+}
+
+
+
 /*fan ファン*/
 
 .numbo {
@@ -440,8 +521,6 @@ h5 {
   margin-left:50%;
   margin-right:-50%;
   z-index:9999;
-    height:auto;
-    width:1000px;  
 }
 
 
@@ -598,11 +677,22 @@ $("#pageflip").hover(function() {
  <script>
  
      $(document).ready(function() {
-  $(".nanbaringu").click(function() {
+  $("#nanbaringu1").click(function() {
     $("#form1").fadeToggle("fast");
   });
 });
+
+ $(document).ready(function() {
+  $("#nanbaringu2").click(function() {
+    $("#form2").fadeToggle("fast");
+  });
+});
      
+      $(document).ready(function() {
+  $("#nanbaringu3").click(function() {
+    $("#form3").fadeToggle("fast");
+  });
+});
  </script>
  
  
@@ -649,30 +739,84 @@ $("#pageflip").hover(function() {
 
 <section id="home">
 
-
-<!-- fan --> 
 <!-- ① --> 
 
 <div class="numbo">
-<button type="button" class="nanbaringu" style="margin-left:-50px; margin-top:750px;">3</button>
+<button type="button" id="nanbaringu1" style="margin-left:-35px; margin-top:500px;">1</button>
 
-<form id="form1" style="margin-left:-500px; margin-top:-70px;">
-DETAILS
+<form id="form1" style="margin-left:-470px; margin-top:-70px;">
 
-<h5>Details from the handcrafted fan are
-<br> so intricate even its rivet is styled</h5>
+LEAVES
+
+<br>
+
+<h5>Made with cloth, paper or wood,  
+<br>they determine the fan's prestige</h5>
+
+<!-- dasshu ダッシュ-->
+<a><img src="https://i.ibb.co/T8VmGtM/dasshu.png" style="width:130px; margin-left:50px; top:0px;"></a>
+<!-- dasshu ダッシュ-->
+
 </div>
 </form>
 </div>
-<!-- ① --> 
+<!-- ① -->  
+
+<!-- ② --> 
+
+<div class="numbo">
+<button type="button" id="nanbaringu2" style="margin-left:20px; margin-top:640px;">2</button>
+
+<form id="form2" style="margin-left:180px; margin-top:70px;">
+
+STICKS
+
+<br>
+
+<h5>The more elaborate the carvings,
+<br>the richer the storytelling becomes</h5>
+
+<!-- dasshu ダッシュ-->
+<a><img src="https://i.ibb.co/T8VmGtM/dasshu.png" style="width:130px; margin-left:-390px; top:0px;"></a>
+<!-- dasshu ダッシュ-->
+
+</div>
+</form>
+</div>
+<!-- ② --> 
+
+<!-- ③ --> 
+
+<div class="numbo">
+<button type="button" id="nanbaringu3" style="margin-left:-60px; margin-top:750px;">3</button>
+
+<form id="form3" style="margin-left:-480px; margin-top:-70px;">
+
+RIVET
+
+<br>
+
+<h5>Quality, crafted fans are endowed 
+<br>with intricately styled metal rivets</h5>
+
+<!-- dasshu ダッシュ-->
+<a><img src="https://i.ibb.co/T8VmGtM/dasshu.png" style="width:130px; margin-left:30px; top:0px;"></a>
+<!-- dasshu ダッシュ-->
+
+</div>
+</form>
+</div>
+<!-- ③ --> 
+
+<!-- fan --> 
 
 <div id="fan">
-
-
 
 <a><img src="https://i.ibb.co/K0gXkZx/bluefan.png" style="width:700px; margin-left:-300px;"></a>
 
 </div>
+
+<!-- fan --> 
 
 
 
