@@ -33,16 +33,21 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 a { 
     color:#000000;
     text-decoration: none;
+    cursor:help;
     transition-duration: 0.6s;
     -moz-transition-duration: 0.6s;
     -webkit-transition-duration: 0.6s;
     -o-transition-duration: 0.6s;
     }
     
+/* blockquote ブロッククォート */
+    
 blockquote {
-border-left: 2px solid #ccc;    
+border-left: 2px solid #ad3a07;    
 padding:2px 5px 2px 20px;
 }
+
+/* blockquote ブロッククォート */
 
 /*title*/
 
@@ -56,7 +61,7 @@ h1 {
 /*underline 下線*/
 
 a.kasen {
-  color:#ebc72a;
+  color:#ad3a07;
   text-decoration: none;
   position: relative;
   transition: all 0.3s;
@@ -77,7 +82,7 @@ a.kasen:before {
 }
 
 a.kasen:hover::before {
-  border-bottom: solid 1px #ebc72a;
+  border-bottom: solid 1px #ad3a07;
   width: 100%;
   left: 0%;
 }
@@ -98,6 +103,9 @@ a.kasen:hover::before {
 
 }
 
+/* purattohōmu プラットホーム */
+
+
 #platform{
     bottom: 80px;
     background-repeat:no-repeat;
@@ -110,7 +118,6 @@ a.kasen:hover::before {
   text-transform: none;
   position: fixed;
   z-index:999;
-  cursor:help; 
 
 }
 
@@ -130,6 +137,19 @@ a.kasen:hover::before {
 
 }
 
+#platform img:last-child {
+  display: none;  
+}
+#platform:hover img:last-child {
+  display: block;  
+}
+#platform:hover img:first-child {
+  display: none;  
+}
+
+/* purattohōmu プラットホーム */
+
+
 #bluesquare {
     position:absolute;
     width:110px;
@@ -141,20 +161,28 @@ a.kasen:hover::before {
 }
     
 
-#platform img:last-child {
-  display: none;  
-}
-#platform:hover img:last-child {
-  display: block;  
-}
-#platform:hover img:first-child {
-  display: none;  
+
+/* menu メニュー */
+
+
+.menyu {
+  top: 100px;
+  right: 120px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  text-transform: none;
+  position: fixed;
+  z-index:999;
 }
 
-.credit {
-color:#000000;
-  bottom: 100px;
+/* menu メニュー */
+
+/* credit クレジット*/
+
+#kurejitto {
+width:150px;
   right: 100px;
+  bottom:73px;
   font-family:'Nunito', sans-serif;
   font-size: 18px;
   text-transform: none;
@@ -162,14 +190,26 @@ color:#000000;
   z-index:999;
 }
 
-.menu {
-  top: 100px;
+#kurejitto:hover {
+width:150px;
   right: 100px;
-  font-family: 'Varela Round', sans-serif;
+  bottom:80px;
+  font-family:'Nunito', sans-serif;
   font-size: 18px;
   text-transform: none;
   position: fixed;
   z-index:999;
+}
+
+#kurejitto img:last-child {
+  display: none;  
+  
+}
+#kurejitto:hover img:last-child {
+  display: block;  
+}
+#kurejitto:hover img:first-child {
+  display: none;  
 }
 
 ul#hlist li {
@@ -178,6 +218,33 @@ ul#hlist li {
 
 .li { display: inline; }
 
+#yaku {
+    width:110px;
+}
+
+#yaku img:last-child {
+  display: none;  
+}
+#yaku:hover img:last-child {
+  display: block;  
+}
+#yaku:hover img:first-child {
+  display: none;  
+}
+
+#janaru {
+    width:110px;
+}
+
+#janaru img:last-child {
+  display: none;  
+}
+#janaru:hover img:last-child {
+  display: block;  
+}
+#janaru:hover img:first-child {
+  display: none;  
+}
 
 img{ 
 width: 100%; 
@@ -755,25 +822,37 @@ $("#pageflip").hover(function() {
     Team X  
     </div>
 
-    <div class="credit">
-      <a href="#?w=500" rel="credit" class="poplight">credit</a>
-      </div>
+    <div id="kurejitto">
+      <a href="#?w=500" rel="09" class="poplight"><img src="https://lh3.googleusercontent.com/rWJaDeHZ6QLam59SXa-sdGb6iBElydCDO7KJ7JZPTQo6bR5fLetdS4n1Max4AoWZmmmyOhf68qpIptFZE4KJ5oSzwiGgJSzedHPGck8YYnJGTsYgIxoExdphNpnZKM3tiQC2HKUgGrfe-86xLCFmCGjZloavMUxaIBpdocUX456pPPoEN6bFk6cbLsKXKpeYp9HEpemYiYGmmXt8vnDzFGSAAe5kAMZUFUYL0dzvOgDtOF9uSUte3aRZWBZrXGnbPwoC-ujr4YHGJ-L9aHR_OnjWmYPOM2UsqvLlCmLE2Gcz2QV9nqnrpPNOgpVRBCiU0i7SZN3CZnjXWKCIlIapyoaIBsAvk1abSy85gf3FVQD0Jwr2qxEAh8MMhamyKvSXxDqHrBx510FUZ3qq0a9QKYsYGAtab-H-vwaF_MeYqXzxiu26gcBdNIZXa3Zd6TrdiX6R_g9SPTWFoRAW6zMdClCoqVbv9ADWc2xvYJYuHuNy-YMYs6AhLu3RKQX3AFiVgNdJgEWPMCXivqdydoy9UDniIJ8uk9f3RCoDK9O7qaCqWvamchhTuWX9d-t_wnyrBMi5RrH1xrFrDM3LmgxfdNWRZojcDfyFUeyTzz7adsgJLTwP8t0t19WhyQ3EvAD-ko_-3S_eDzDiuiGhjDVDRfukAulMZwWuJsTCzTdtDFOSYGbBo93vqai7O3k=s391-w391-h248-no"><img src="https://lh3.googleusercontent.com/wTrmGBObzdCwn5xrRpVvXbf9is6leC-v3LKZbWu18sV1NwCcg_DbnsXoLSGjVOWhgZvHK3uhGV_7oC6ksUhLCBBZfpTkiFHmt9QbR65Y5qQEKsaViWrCJRJSgzZIpNeUhlOWr9dvogYtEYLzKHqMjwJXvEEDthft6qxvlHEFhxKz6TaO_IS6mUo5diQOn0hqLOopBSUzmxq5fjrp68VNImJstMidpjn5NS6Y9hgxGZ_5epfvTiISOC9u4kMVxClakDd7k19k0qOocgHanHWVFWsnS2gZIkio2dSYL2IVr3LNC47xc5WXMIawc4yXCXrVBxQPuSqTgwlT4BXNBztRNFPK6BEfxVQRQdRQAa3m73DAvWdSl_rcJC6KiLS0pz6RAuSO6_sUjqz6_gV4cT3LhrsYbOwE9JwBjoUJQ4lyXbbDWtiif_YNlYsKPf_a1D0fX1EO1tu_S1962xsKAdOnKCAihgY_WCLAEjj6F_4ORqy0ISR0lz6U-qVeO9p7lb8o5UzrRxSoAdmDGlb5PIrz1kYtcE2WBJPAegKZGCn-rw9EBoAbNlA0X1aQ69W6X0Zo1VrAUGkMJGYsEaT6CxZziUoFkbpGlZQgAJAV7BRhuj9skobSpqHgVVfPqrX9Mm4cz2phGKjCK0asE0B1FHjY8kJpVAupbF49yFJ19Gu0dA09GrniiV8nvECQuD0=s391-w391-h248-no"></a>
+</div>
 
-  <div class="menu">
-    <ul id="hlist">
-     <li>Info</li> &nbsp&nbsp&nbsp&nbsp
-     <li>Inbox</li>
-    </ul>
+<!-- menyu メニュー -->
+
+  <div class="menyu">
+   
+  <div id="yaku" style="margin-left:-300px; ">  <a><img src="https://lh3.googleusercontent.com/0TyG8R3nAznEkYiUZ92djOBEFQWz_fGMTr_Dbp-G6Q2wvLufZAb9PsMPwheE12PZ_0ker9yZKvDdAdz63MaIJc1ZUPwOoHdJkjw5wJFnTbi4JY_L4ja0jUcDMmdVuNLXqS8_gDa_7zv8cfZa1q2kwZdF7gjRSmCzpxCe5r1aD1Mayv45SHR8oVWtcGMLpx6kfHErJHemzJdq81iUWZvMGqDEvZmSZM5IVFxIDFKAiu6KNQxBad1KPglDUHv9Uz6PcteRpIfUB2LqfXg6qscd7QfprzCqJpebqEf8ObeSJHT7b_EjFGF6ZP7rNyufcUewMGyXpEc7ID_KbCIkejd93d5ZkI1APv9cvcZXspyDXLF6nwcrgnGxvqgVDDxjCt7EA9UjHABHpjcdwP50dU2seppIYQyJAhcOE_lLaXKFvhvtWUMHkyDfvnh24XUYpi5HZkroftK3ZnKUHi2suap8wT5cFwwffex2gExYljWm2omcHKh96mqWSb4zkZ55Q4bk0a1-Z-NcgaRxLGCLrV1xpcvHl9nAdhOe2wDRzKUtuDsx4-GjZvHUlXvuiWUIs8ofbBjr1cmDWbdmdy1VljPaO02FHK9e3X3xshKLMuKJpKSyFcFfJ_dPsdxYyYyVFyWV3rADaoI_svBbykdy0J62NF9hbeqt7K2t7qPrMCjoBttoSn-Fm_YqQg=w295-h143-no"><img src="https://lh3.googleusercontent.com/cQecApL1-4WDW5skTZnnmfvjTcJhn7uepqQFWyLkRMVKu0axeQa9BjgXyjTqMVb7mGscmyU2Jh5qjJC3lFA3_P7IMXoenpG5BwrDXNm4_RBOaTZo1elbqzCYjE8tLba_8LOpGncF-pb1WbxyGij5GOkHUjOrMlInLFQGB5yJwBPoc4IY8rxVKfzUcnsQxKnsVz8_iNGeVMEHfgUPZYilgE6ZuWFkiY0C4KClBDCLzM2T8Dyl_YB6alP469x_QYhH6y51MoIWrOqc_2j-otd43doJrHqifzvIbHsHhWXGu1gXtU6aIHzCluVfQ1h2Ax7wcfnQSs_XJMkkwO3enjHakXvDh6MOJ4oQGCan6VzrfYVkgKYciuNMhkkvrpXZfqVmPjHsJlijicLIsujhLwIzbvLPekLMlpdgoQ9pvnkiiq8E_7_yBuBG4a4gVwh_h_7nKXSBmpi7HofTtQqLohhQtPfBjdGdB1ZCry-ICKEjZu6EtNfDDRwIMdzOrDUZgoU7yB3TCgoyV_ZWOu-UEgIJ_Dw62cUJS2fohCAoxmmQP0F_51cWaUvI_FBjLNhilZHS6i9SEVJr5tFaPij3tzhM4fyULUOofbCTJrs8ci8x73xH1gA0j1bZJ4gg2vjIyzlC6cxJigwvVjSkQipe7sD23Uhwhx4ruFd8v7fkE01TjuUPsnRvXU76BueCAHY=s295-w295-h143-no"></a></div></div>
+  
+    <div class="menyu">
+     <div id="janaru" style="margin-top:-5px"><a><img src="https://lh3.googleusercontent.com/q_-Ea0jsbAs7-I4GKAaQM_UiNX43dDoTpFPl-2XzrEp5zgrbhgOmVJ2MAFoYt1F3OtKxuGD9GRkdu7slGpnNMZ7enx6CScCFnC-Zr9eDZErjNqOF7VN6QABWnHLFYgepuCI9xkpgliNDV86RXGO1PO40-heKAN9V4-0dLLwhVpJrKWJBMV5HQFMBGalWjBwdNS5aFpqFhQJCrJAKzOGRgMKRZW9D6GYqAJ5uUP9VTpiqWAevfI4DkSceNYl_TsdKMpKRPgGdshJRXBRPqt6ODd4ScOGgMObu_OcO6dJe1C3UxIDtTXIkYiA132sibU4Y59HQXl6Ur69DB2dtyA1izh8OyZuRqNXdCJv7HzLQA04_HDz86ZnD8KugXgGbWXy78UQx2vZv5bdi7fV_sqfJuUD_LnW2Sj05cRw8TF0u7B3qpbuVeAO-nPAAQQ4kixsGmeuuV_UabbNdIlr1GTv3rJqLDsL-17f_vVU1uAaRygBFjmLUL3mHzQKdfqPWf8OuH68UbgS5AsWfu8fgbwTgqQnfuW1GGjUPZktT1v6frp2BA0Lq8uNKlkaJrwazCwRyMpQpCgs88ShNXB86CBnjZXDAFydgoY6LeedvY4b1HEfo14RpLpE-Gi9V00InjBrjLIht--blMEU0b22stdBZZSKf5ED9O_iLNUQEqEK50fGlGMOKsKMqZSErdyo=s341-w341-h131-no"><img src="https://lh3.googleusercontent.com/Fu8FhhBQwLr9kLl0BYE5i69y6FNMECCuNYUUcz1S445UkhXJ5uqs0uxsqvtDmvtPnnFExIi0YL4pOjhS95aNKe4rkHcebFtEUMqI-KSfRcJGkWcGNegUOfLpT-qccv2mvs7ciIkCbwJHH-clkCt-XpH1hnVKC0mLOqtnAe2pKLiVBuCAtidSqOt4QlfrkOOgHbMoyUWhnD5xFq2w1QAQ1ztlzJ7cLilJhcGAp4qr7mvluUI_80LTNkVNO0cXZyB__W0OeedmOlSvShOddarcV2LOUz5LfmrC_EAtbTmax55Ht7lUqs702Oh-lh2OnRG56UHyuMOoPuBLWOh3viQL-ERHNtW7KyGkmWpQOAawEPEic-7byX0QSLAdUgS7iQaf9S9L0k4sy8uYyPn8bAQ5rd_cBIERnXs-x79gy0j-9roCBTi-3OQWqE6oiOCHtJtm0UfYmWV2JdA07jB7ObFWP4FF3pgNlYe2YhaPSBR5kDAj5zDHEYhiDWVLlMiEZdIFVkW2-VVzFY88dkh8RRFkRnvb9ljpS2Q5KKObNVZ-vjVCsouu9TgoDqVDAgNwEIdSKj3hdCENKizAznUWJ5UPR2GnJMXlyL2hx7IQtAzI4dGk_Q8t93fvs7NRU0dp1xxqAPVUOYt8hh0zcC0PhuM44RPX904UrQYuIzV76vL8aOw4E7v1I7nmjA=w341-h131-no"></a></div>
+   
     </div> 
+    </div>
     
+<!-- menyu メニュー -->
+    
+<!-- purattohōmu プラットホーム -->
+
     <div id="platform">
 
 <a>
-   <img src="2116_unhover.png" /> 
-   <img src="2116_hover.png" />
+   <img src="https://lh3.googleusercontent.com/oBdIVFv2EieM0aHjgG02WUV3jnGdEgUaKK0K821dRev5nlA6cITZxL2ywv_I32vtnDzPEse38wpuFYnuy5US6-5XJFd4MXnebGlcJzxZlGGAMqZ553zoZu5uwnq_zUuTP7m5A6TOKsKjxD0NZBP02xL2FOmQNEqEiXjKQchoAVl-C5UnckCWyimkwnSBNdrTFNTS0v0hq0ThTq3D7XmkQoNrpNE9jGy1LF0Q4PdlG-_hZUhTYGj2myVCM73i81Ernn5v9Dk1DcFj9aEAVMFd8J2LTTE4pANrsEcAT-rmIXbWF_y3lHve4m9UxBFJhIG0m6aYiUss4wHfJv7Ljo6OfRG4cQMzWr2ELirrwkq7R2emVbvZpihraINBNNvirDOM1nYT9XGyXJF_be63cZ7IvZDHNsIlRuRMyNfto_VBE6S8N2j7ebIhTW9d26oKOIz_vux4QiXM9_ncsD8gaS10VQEohyaJ3KQBxzhaDGpQSjrxZI8ryppFHmN1SooEJQINepL7epVsYSVc7hGOAWfl_-nePSQekAQrJsSljnjHmDAf3vCHDOpeovabbVlb85lVo2qUfB7TqHVPjPFsHCNE6OxlHuEpqcjJmTWMEY-ECr24MRC-9HSkJkbaxaINbhCrfW8TzdLOJC9h5ISBUY-D7W79_s_e3I1dv9rER2nZMXvvOCQIo9Ue2A=w328-h165-no" /> 
+   <img src="https://lh3.googleusercontent.com/QLVkMYNHPV7ImVdUXxo6jRzoJJ5PuZ-PEEE-0kRtKpkjNAgomUIJx4diEUqoXzf4xbzGupR8htYTKr9rzyZZ04ucXfUuaUeewd45Z7SK2YA2ebLkEWbHJ9zoP_wmpi-Oh24KIgJNucB3ubw9fANwx6W7Jl3itEhNjY0qzSqEK2y9wLv2a_q23nJPagKiRmgw_9L2motoNQ1N-3fmftGZrNhzNV_Y2wJRifNpcGqoKzIMZHbH144FMWwhApbFF16fHA1T3PzHzeaP32niP8po_v0ol07qvMdZD2WMI_zm29euYPszMnLFLIswKKvmAbo9h_07BwQISmY4-nR0Rq5_CeM4gw8dcfFr5Op1BzpI-M3HyjLDqf3zUD0ucDuUWzoT60FK4UJGB1rf1MDbYMN6FSmWSAe1N7UturMCMEeLYOdy7F7UDiLx3PpqGDKUsBRc9ufUzesViF4G72zZRB4PYPvgVtuYbF3Gs3hcNxW6w5BrED3mPQYBF8c2t3ZIjpOnxWHXEq0L5F4iDOwgzJ4_lTC34e153zHtVcnVT4ZHRjfMc7virhDttHujqWqhDyJirP_e3Q2R9-sdZgV_dOLSF8PVvfSApR-22EdZTJqMIHaaVL_xnx62MbZAr4bD_hCGAzH51iheYgPHxMe735z6_90CuHrrHPly7PiLG2NLTPKCIRgrrm_qAoGTAiE=s269-w269-h135-no" />
 </a>
 
     </div>
+    
+<!-- purattohōmu プラットホーム -->
+
  
  
     
@@ -867,7 +946,7 @@ RIVET
 
 <div id="fan">
 
-<a><img src="fan.png" style="width:990px; margin-left:-300px;">
+<a><img src="https://lh3.googleusercontent.com/PqmbbaIiHZHk8IjHyx9ACZuB7FkxpQia0XSFAvhnh-UXe_ueP3lVJHa4chbI5rTaYiZY8rn937QjrMZsN7NPqMwujA3VnA2xIH9KyWsIP91w3utomDrepXruuzDb9PFzZwNNDKVKySloPboiiu9R_RWgsXH0K8fh9tkhtfj0dKzZIrg-RG_VZma8gl7-9dY348Mr80Z72KMeWVNGxf6Y9rMUhnkhUi3TeyQhzExxpTXF8i6WV41U9QGTfHKosIT2WIJo9Gz95hbdoUFaLbK1cZ0FBHIp6qSJJaFA4haH9EjQd5YfwTDTrr-oji41e5CVcm1Uz81bimA3E7xCPYRufMDxGHBEz6ZoIGwWFYiyUdvieHj4cFzBmtePdk8CIU-hsmV2GYmtkpBL_ptPanCmSWfW2bkeoPSq1g9BUdKdyDESmHwHkVfX-K29PNMEaAlwT7GFG-rwh-Iy39nAfe0bWAPo6_09wIXMNB2Kb8RxLQfY_cUrTuhAmm7fkkB120cItmk8vIa_8eCrnqE79HmcK-dWRLfIAK53MOYIXGBJHAS_iYSjgV9Zy4ir3-AX79QfWFqMbcwGgvTpWnc2m5FXkWV4NEP-GR4DBJY0yp-Z_ApOZvDF1iiFmlgbWqq1iVs5nWB_yGu51aka9eSeuztdUlosV1_ERYWWwoMpI4ICh77n7i-3wAHoDw30oLA=s2017-w2017-h1721-no" style="width:990px; margin-left:-300px;">
     
     <!-- secret message for minh -->
     
@@ -1009,7 +1088,7 @@ write here whatever you want ok bye
             
             </div></div></div></div></div></div></div></div></div></div></div>
             
-           <div id="credit" class="popup_block">
+           <div id="09" class="popup_block">
 
            <h1> CREDIT PAGE </h1>
             <br>
