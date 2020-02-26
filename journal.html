@@ -419,7 +419,20 @@ section {
 
           .purikura {
           margin-top:10px;
+          
         }
+        
+        .purikura figure img {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	
+}
+.purikura figure:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
 
 #s-m-t-tooltip {
 background: #fff;
@@ -442,7 +455,7 @@ margin-left:20px;
 margin-top:20px;
 z-index: 999999999999;
 }
-
+ 
 /*the page ページ section*/
 
 .hide {
@@ -650,8 +663,23 @@ h5 {
 background-size:cover;
 background-image:url();
     
+
 }
 
+figure {
+	width: 300px;
+	height: auto;
+	display:inline;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
 
 
         </style>
@@ -983,28 +1011,22 @@ RIVET
 	
   <div class="purikura">
   
-  <a href="#?w=500" rel="01" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
+<a href="#?w=500" rel="01" class="poplight"> <figure> <img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a></figure> &nbsp; 
   
-  <a href="#?w=auto" rel="02" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+ <figure> <a href="#?w=auto" rel="02" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></figure></a> &nbsp;
   
-  <a href="#?w=auto" rel="03" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  <figure><a href="#?w=auto" rel="03" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a></figure> &nbsp;
   
-  <a href="#?w=auto" rel="04" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a
-  </div>
+  <figure><a href="#?w=auto" rel="04" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a></figure></div>
 
     <div class="purikura">
-    <a href="#?w=500" rel="05" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp; 
+   <figure> <a href="#?w=500" rel="05" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a></figure> &nbsp; 
   
-  <a href="#?w=auto" rel="06" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+  <figure><a href="#?w=auto" rel="06" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a></figure> &nbsp;
   
-  <a href="#?w=auto" rel="07" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a> &nbsp;
+ <figure> <a href="#?w=auto" rel="07" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a></figure> &nbsp;
  
- 
-    
- 
-
-	
-  <a href="#?w=auto" rel="08" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a>
+  <figure><a href="#?w=auto" rel="08" class="poplight"><img src="https://pbs.twimg.com/media/CX1PAZwVAAANemW.jpg" style="width:250px;"></a></figure>
   
     </div>
   
