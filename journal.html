@@ -1140,7 +1140,10 @@ $("#pageflip").hover(function() {
   For this week, we decided to test out the different sensors present in the microbit. Of all the various ranges of sensors present in the Microbit, we decided to narrow down to 3 main sensors that relate back to the transformative nature of the folding fan.
   <br>
   <br>
-  <img src="https://i.imgur.com/ZZjsXUq.mp4">
+
+  For our first experiment, we tested the micro:bit’s can sense the tilting of the fan when it is in use. To check if the code worked, we programmed the micro:bit to display a face for each different tilt angle. Through trial and error, we realised that the micro:bit has to be tilted at an acute angle (close to 90 degrees) for it to register our programmed inputs. This posed a problem as it meant the event will only be triggered if the fan was fanned unnaturally.
+  <br><br>
+  <img src="https://i.ibb.co/qFXZ1hN/week02-accelerometer.gif">
   <br>
   <blockquote>Exercise 2.5: Accelerometer</blockquote>
   <br><br>We tested the acceleration speed of our fan opening by attaching the micro:bit to the guard end piece (whats it called) and flicking the fan open and close. We observed that the micro:bit is unable to detect the fan’s acceleration if we flick it downwards on the z-axis but is able to on a flat surface like the x-axis and the y-axis. This led us to the prospect of using the change in acceleration to play sounds as the fan opens and closes.
