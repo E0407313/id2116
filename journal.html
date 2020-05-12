@@ -1240,9 +1240,13 @@ $("#pageflip").hover(function() {
   <br>
   Our initial code involved the use of the y-axis acceleration (mg) input to detect the fanning motion, and the math equation > to define the values within a state. 
  <br><br>
- However, we realized the x-axis/y-axis/z-axis acceleration (mg) was not the acceleration we had in mind. the micro:bit only detected values when tilted in the direction of aforementioned axes. This was unnatural, as compared to the up-and down motion of fanning. 
-          
-</div></div>
+ However, we realized the x-axis/y-axis/z-axis acceleration (mg) was not the acceleration we had in mind. the micro:bit only detected values when tilted in the direction of aforementioned axes. This was unnatural, as compared to the up-and down motion of fanning. Furthermore, the state transitions prescribed to the values did not seem to work as they were not clearly defined. 
+ <img src="https://i.ibb.co/FD92PN2/photo-2020-03-04-20-54-08.jpg">
+  <br>
+  <blockquote>The fixed code.</blockquote>
+  <br> 
+  So we decided to make use of the strength acceleration (mg) function, which is used to measure seismographic activity during earthquakes. As the micro:bit is always subject to the earth’s gravity due to this preset, the value ‘-1023’ has to be added to calibrate it. There are also more detailed boundaries on the frequency values, so that there is a range of transition speeds.
+  </div></div>
             
 <div id="06" class="popup_block">
 
